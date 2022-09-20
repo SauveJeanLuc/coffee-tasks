@@ -23,8 +23,8 @@ export default function SelectButton() {
     option: (styles, {isDisabled, isFocused, isSelected, isFixed }) => {
         return {
           ...styles,
-          backgroundColor: isFocused ? '#fff' : isSelected ? '#611707' : isDisabled ? 'red' : isFixed ? 'green' : '#fff',
-          color: isSelected ? '#fff' : '#611707',
+          backgroundColor: (isFocused && isSelected) ? '#611707' : isFocused ? '#fff' : isSelected ? '#611707' :  isDisabled ? 'red' : isFixed ? 'green' : '#fff',
+          color: (isFocused && isSelected) ? '#fff' : isSelected ? '#fff' : '#611707',
           ':active': {
             ...styles[':active'],
             backgroundColor: '#fff',
