@@ -1,7 +1,7 @@
 import React from 'react'
 import Select from 'react-select';
 
-export default function SelectButton() {
+export default function SelectButton(width) {
   
   const buttonStyles = {
     color: '#fff',
@@ -9,7 +9,7 @@ export default function SelectButton() {
     fontWeight: '600',
     fontFamilly: 'Poppins',
     letterSpacing: '1px',
-    width: '155px',
+    width: `${width}`,
   } 
 
   const colourStyles = {
@@ -34,7 +34,14 @@ export default function SelectButton() {
   
     menu: () => ({
       color: '#611707',
+      zIndex: 9999
     }),
+
+    menuPortal: (styles) => ({
+      ...styles,
+      zIndex: 9999
+    }),
+  
 
   };
 
@@ -46,7 +53,7 @@ export default function SelectButton() {
         options={[
           { value: 'all', label: 'All' },
           { value: 'complete', label: 'Complete' },
-          { value: 'incomple', label: 'Incomplete' },
+          { value: 'incomplete', label: 'Incomplete' },
         ]}
         styles={colourStyles}
       />
