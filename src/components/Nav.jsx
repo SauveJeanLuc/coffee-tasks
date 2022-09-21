@@ -13,8 +13,8 @@ export default function Nav() {
 
   return (
     <div className='nav' style={navStyles}>
-      <Button/>
-      <SelectButton/>
+      <Button margin={'0em'} title={'Add task'}/>
+      <SelectButton width={'155px'}/>
     </div>
   )
 }
