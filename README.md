@@ -8,7 +8,7 @@ A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 to React Beginners
 
 The Next gen AI Powered Todo-List App.
 
-With an Integration of GPT-3 APIs, The next task for your day will be suggested to you.
+With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
 
 Originally designed to help Beginner Front-End Devs build a solid 
 and real-world working app through the course of - [Hacktoberfest](https://hacktoberfest.com/).
