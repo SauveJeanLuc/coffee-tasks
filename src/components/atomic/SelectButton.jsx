@@ -2,7 +2,38 @@ import React from 'react'
 import Select from 'react-select';
 
 export default function SelectButton(width) {
-  
+  // styles to close button 
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      width: `${width}`,
+      border: '1px solid #611707',
+      borderRadius: '5px',
+      boxShadow: state.isFocused ? null : null,
+      '&:hover': {
+        borderColor: '#611707',
+      },
+    }),
+    option: (base, state) => ({
+      ...base,
+      backgroundColor: state.isFocused ? '#611707' : '#fff',
+      color: state.isFocused ? '#fff' : '#611707',
+      '&:active': {
+        backgroundColor: '#611707',
+        color: '#fff',
+      },
+    }),
+    menu: (base) => ({
+      ...base,
+      borderRadius: '5px',
+      marginTop: '0px',
+    }),
+    singleValue: (base) => ({
+      ...base,
+      color: '#611707',
+    }),
+  };
+
   const buttonStyles = {
     color: '#fff',
     fontSize: '15px',
@@ -42,7 +73,6 @@ export default function SelectButton(width) {
       zIndex: 9999
     }),
   
-
   };
 
   return (
@@ -55,7 +85,7 @@ export default function SelectButton(width) {
           { value: 'complete', label: 'Complete' },
           { value: 'incomplete', label: 'Incomplete' },
         ]}
-        styles={colourStyles}
+        styles={customStyles}
       />
     </div>
     </>
