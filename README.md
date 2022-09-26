@@ -16,7 +16,7 @@ and real-world working app through the course of - [Hacktoberfest](https://hackt
 
 ## UI/UX Design
 
-  [Figma Design]([https://linktodocumentation](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1))
+  [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
 
 ## Contributing
 
