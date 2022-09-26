@@ -13,6 +13,7 @@ With an Integration of GPT-3 APIs, Suggestion to your next task comes right away
 Originally designed to help Beginner Front-End Devs build a solid 
 and real-world working app through the course of - [Hacktoberfest](https://hacktoberfest.com/).
 
+All PRs To Be Merged From 1st October
 
 ## UI/UX Design
 
