@@ -10,8 +10,12 @@ The Next gen AI Powered Todo-List App.
 
 With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
 
+One day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this.
+And you'll be part of the Impact 🙂.
+
 Originally designed to help Beginner Front-End Devs build a solid 
 and real-world working app through the course of - [Hacktoberfest](https://hacktoberfest.com/).
+
 
 **All PRs To Be Merged From 1st October**
 
