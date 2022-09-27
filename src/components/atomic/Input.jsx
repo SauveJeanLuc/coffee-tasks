@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Input() {
   const inputStyles = {
-    padding: '10px 0px',
+    padding: '10px 9px',
     border: '1px solid #611707',
     borderRadius: '5px',
     marginBottom: '10px',
