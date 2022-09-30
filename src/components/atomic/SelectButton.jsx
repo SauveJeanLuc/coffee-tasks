@@ -81,7 +81,6 @@ export default function SelectButton({width, setValue}) {
       <Select
         onChange={newValue => setValue(newValue)}
         options={[
-          { value: 'all', label: 'All' },
           { value: 'complete', label: 'Complete' },
           { value: 'incomplete', label: 'Incomplete' },
         ]}
