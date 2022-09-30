@@ -16,10 +16,13 @@ export default function PopUp () {
   }
 
   const addTask = () => {
-    
-    const updatedTasks = [...prevTasks, {"title": currentTask, "status": status.value}];
-    setPrevTasks(updatedTasks);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    if(status == "" || currentTask == ""){
+      alert("both Title and status are mandatory !");
+    }else{
+      const updatedTasks = [...prevTasks, {"title": currentTask, "status": status.value}];
+      setPrevTasks(updatedTasks);
+      localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    }
   }
 
   const popUpContainerStyles = {
