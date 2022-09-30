@@ -14,11 +14,22 @@ jobs:
     permissions:
       contents: read
       security-events: write
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        node: [ 14 ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+
       - name: Install dependencies
         run: npm install
+
       - name: Run ESLint
         run: npm run lint
         continue-on-error: false
