@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Button({margin, title, isColorFlipped}) {
 
@@ -10,7 +11,7 @@ export default function Button({margin, title, isColorFlipped}) {
     borderRadius: '5px',
     fontSize: '15px',
     fontWeight: '600',
-    fontFamilly: 'Poppins',
+    fontFamily: 'Poppins',
     letterSpacing: '1px',
     margin: `${margin}`,
   } 
@@ -20,4 +21,10 @@ export default function Button({margin, title, isColorFlipped}) {
         <button style={button}>{title}</button>
     </div>
   )
+}
+
+Button.propTypes = {
+  margin: PropTypes.string,
+  title: PropTypes.string,
+  isColorFlipped: PropTypes.string
 }
