@@ -1,7 +1,7 @@
 import React from 'react'
 import Select from 'react-select';
 
-export default function SelectButton(width) {
+export default function SelectButton({width, setValue}) {
   // styles to close button 
   const customStyles = {
     control: (base, state) => ({
@@ -79,7 +79,7 @@ export default function SelectButton(width) {
     <>
     <div style={buttonStyles}>
       <Select
-        onChange={newValue => console.log(newValue)}
+        onChange={newValue => setValue(newValue)}
         options={[
           { value: 'all', label: 'All' },
           { value: 'complete', label: 'Complete' },

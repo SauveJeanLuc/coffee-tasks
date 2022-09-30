@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Button({margin, title, isColorFlipped}) {
+export default function Button({margin, title, isColorFlipped, clickHandler}) {
 
   const button = {
     backgroundColor: isColorFlipped ? '#fff' : '#611707',
@@ -17,7 +17,7 @@ export default function Button({margin, title, isColorFlipped}) {
 
   return (
     <div>
-        <button style={button}>{title}</button>
+        <button onClick={clickHandler} style={button}>{title}</button>
     </div>
   )
 }

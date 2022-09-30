@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Input() {
+export default function Input({onChangeHandler}) {
   const inputStyles = {
     padding: '10px 0px',
     border: '1px solid #611707',
@@ -15,7 +15,7 @@ export default function Input() {
 
   return (
     <div style={containerStyles}>
-        <input type="text" style={inputStyles} placeholder="Add a new task" />
+        <input onChange={onChangeHandler} type="text" style={inputStyles} placeholder="Add a new task" />
     </div>
   )
 }
