@@ -22,6 +22,7 @@ export default function PopUp () {
       const updatedTasks = [...prevTasks, {"title": currentTask, "status": status.value}];
       setPrevTasks(updatedTasks);
       localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+      window.location.reload(false);
     }
   }
 
