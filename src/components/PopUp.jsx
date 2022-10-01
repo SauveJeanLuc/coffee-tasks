@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SelectButton from './atomic/SelectButton'
 import Input from './atomic/Input'
 import Button from './atomic/Button'
@@ -6,6 +6,25 @@ import multiply from '../assets/multiply.svg'
 
 
 export default function PopUp () {
+  
+  const [prevTasks, setPrevTasks] = useState(JSON.parse(localStorage.getItem("tasks")) ?? []);
+  const [status, setStatus] = useState("");
+  const [currentTask, setCurrentTask] = useState("");
+
+  const handleInputChange = (e) => {
+     setCurrentTask(e.target.value);
+  }
+
+  const addTask = () => {
+    if(status == "" || currentTask == ""){
+      alert("both Title and status are mandatory !");
+    }else{
+      const updatedTasks = [...prevTasks, {"title": currentTask, "status": status.value}];
+      setPrevTasks(updatedTasks);
+      localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    }
+  }
+
   const popUpContainerStyles = {
     position: 'absolute',
     top: '0',
@@ -64,12 +83,12 @@ export default function PopUp () {
                 <h2>Add TODO</h2>
                 <div style={formStyles}>
                     <label htmlFor="">Title</label>
-                    <Input/>
+                    <Input onChangeHandler={handleInputChange} />
                     <label htmlFor="">Status</label>
-                    <SelectButton width={'100%'}/>
+                    <SelectButton setValue={setStatus}  width={'100%'}/>
                 </div>
                 <div style={buttonsStyles}>
-                    <Button margin={'0em 0.5em 0em 0em'} title={'Add Task'}/>
+                    <Button clickHandler={addTask} margin={'0em 0.5em 0em 0em'} title={'Add Task'}/>
                     <Button margin={'0em 0.5em 0em 0em'} title={'Cancel'} isColorFlipped={true}/>
                 </div>
             </div>
