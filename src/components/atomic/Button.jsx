@@ -1,23 +1,9 @@
 import React from 'react'
 
 export default function Button({margin, title, isColorFlipped, clickHandler}) {
-
-  const button = {
-    backgroundColor: isColorFlipped ? '#fff' : '#611707',
-    color: isColorFlipped? '#611707' : '#fff',
-    padding: '6px 12px',
-    border: ' 1px solid #611707',
-    borderRadius: '5px',
-    fontSize: '15px',
-    fontWeight: '600',
-    fontFamilly: 'Poppins',
-    letterSpacing: '1px',
-    margin: `${margin}`,
-  } 
-
   return (
     <div>
-        <button onClick={clickHandler} style={button}>{title}</button>
+      <button onClick={clickHandler} className={"py-[6px] px-[12px] border border-[#611707] rounded-[5px] font-[600] font-['Poppins'] tracking-[1px] text-[15px] " + (isColorFlipped ? "bg-white text-[#611707]" : "bg-[#611707] text-white")} style={{margin: `${margin}`}}>{title}</button>
     </div>
   )
 }
