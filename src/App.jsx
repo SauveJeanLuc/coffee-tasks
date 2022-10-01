@@ -1,7 +1,8 @@
-import Header from "./components/Header";
-import Nav from "./components/Nav";
-import ToDoContainer from "./components/ToDoContainer";
-import PopUp from "./components/PopUp";
+import React from "react";
+import Header from './components/Header';
+import Nav from './components/Nav';
+import ToDoContainer from './components/ToDoContainer';
+import PopUp from './components/PopUp';
 
 function App() {
   const divStyles = {

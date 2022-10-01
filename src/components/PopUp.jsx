@@ -47,11 +47,10 @@ export default function PopUp() {
   };
 
   const popUpStyles = {
-    backgroundColor: "#E5D8D8",
-    padding: "10px",
-    borderRadius: "5px",
-    padding: "1em 2em 2em 2em",
-  };
+    backgroundColor: '#E5D8D8',
+    borderRadius: '5px',
+    padding: '1em 2em 2em 2em',
+  }
 
   const formStyles = {
     display: "flex",
