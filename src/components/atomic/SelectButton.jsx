@@ -1,47 +1,47 @@
-import React from 'react'
-import Select from 'react-select';
+import React from "react";
+import Select from "react-select";
 
-export default function SelectButton(width) {
-  // styles to close button 
+export default function SelectButton({ width, setValue }) {
+  // styles to close button
   const customStyles = {
     control: (base, state) => ({
       ...base,
       width: `${width}`,
-      border: '1px solid #611707',
-      borderRadius: '5px',
+      border: "1px solid #611707",
+      borderRadius: "5px",
       boxShadow: state.isFocused ? null : null,
-      '&:hover': {
-        borderColor: '#611707',
+      "&:hover": {
+        borderColor: "#611707",
       },
     }),
     option: (base, state) => ({
       ...base,
-      backgroundColor: state.isFocused ? '#611707' : '#fff',
-      color: state.isFocused ? '#fff' : '#611707',
-      '&:active': {
-        backgroundColor: '#611707',
-        color: '#fff',
+      backgroundColor: state.isFocused ? "#611707" : "#fff",
+      color: state.isFocused ? "#fff" : "#611707",
+      "&:active": {
+        backgroundColor: "#611707",
+        color: "#fff",
       },
     }),
     menu: (base) => ({
       ...base,
-      borderRadius: '5px',
-      marginTop: '0px',
+      borderRadius: "5px",
+      marginTop: "0px",
     }),
     singleValue: (base) => ({
       ...base,
-      color: '#611707',
+      color: "#611707",
     }),
   };
 
   const buttonStyles = {
-    color: '#fff',
-    fontSize: '15px',
-    fontWeight: '600',
-    fontFamilly: 'Poppins',
-    letterSpacing: '1px',
+    color: "#fff",
+    fontSize: "15px",
+    fontWeight: "600",
+    fontFamilly: "Poppins",
+    letterSpacing: "1px",
     width: `${width}`,
-  } 
+  };
 
   // not used
   // const colourStyles = {
@@ -78,17 +78,16 @@ export default function SelectButton(width) {
 
   return (
     <>
-    <div style={buttonStyles}>
-      <Select
-        onChange={newValue => console.log(newValue)}
-        options={[
-          { value: 'all', label: 'All' },
-          { value: 'complete', label: 'Complete' },
-          { value: 'incomplete', label: 'Incomplete' },
-        ]}
-        styles={customStyles}
-      />
-    </div>
+      <div style={buttonStyles}>
+        <Select
+          onChange={(newValue) => setValue(newValue)}
+          options={[
+            { value: "complete", label: "Complete" },
+            { value: "incomplete", label: "Incomplete" },
+          ]}
+          styles={customStyles}
+        />
+      </div>
     </>
-  )
+  );
 }

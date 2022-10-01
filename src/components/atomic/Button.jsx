@@ -1,7 +1,13 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React, { useState } from "react"
 
-export default function Button({margin, title, isColorFlipped}) {
+export default function Button({
+  margin,
+  title,
+  isColorFlipped,
+  clickHandler,
+}) {
+  const [hover, setHover] = useState(false);
 
   const button = {
     backgroundColor: isColorFlipped ? '#fff' : '#611707',
@@ -14,13 +20,22 @@ export default function Button({margin, title, isColorFlipped}) {
     fontFamily: 'Poppins',
     letterSpacing: '1px',
     margin: `${margin}`,
-  } 
+    transform: hover && "translateY(-3px)",
+    boxShadow: hover && "0px 2px 2px 2px rgb(97, 23, 7)",
+  };
 
   return (
     <div>
-        <button style={button}>{title}</button>
+      <button
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onClick={clickHandler}
+        style={button}
+      >
+        {title}
+      </button>
     </div>
-  )
+  );
 }
 
 Button.propTypes = {
