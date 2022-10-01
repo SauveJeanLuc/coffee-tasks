@@ -39,7 +39,7 @@ export default function PopUp () {
   }
 
   const popUpSizer = {
-    width: '25%',
+    width: '300px',
   }
 
   const popUpStyles = {
@@ -80,7 +80,7 @@ export default function PopUp () {
                 <img src={multiply} style={closeLogoStyles} alt="logo" />
             </div>
             <div style={popUpStyles}>
-                <h2>Add TODO</h2>
+                <p className='font-bold text-xl'>Add TODO</p>
                 <div style={formStyles}>
                     <label htmlFor="">Title</label>
                     <Input onChangeHandler={handleInputChange} />
