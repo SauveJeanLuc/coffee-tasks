@@ -1,5 +1,6 @@
 import React from "react";
 import Select from "react-select";
+import PropTypes from "prop-types";
 
 export default function SelectButton({ width, setValue }) {
   // styles to close button
@@ -90,4 +91,9 @@ export default function SelectButton({ width, setValue }) {
       </div>
     </>
   );
+}
+
+SelectButton.propTypes = {
+  width: PropTypes.string,
+  setValue: PropTypes.func,
 }

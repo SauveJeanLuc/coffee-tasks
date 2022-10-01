@@ -41,5 +41,6 @@ export default function Button({
 Button.propTypes = {
   margin: PropTypes.string,
   title: PropTypes.string,
-  isColorFlipped: PropTypes.string
+  isColorFlipped: PropTypes.bool,
+  clickHandler: PropTypes.func
 }

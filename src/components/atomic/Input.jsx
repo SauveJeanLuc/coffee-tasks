@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Input({ onChangeHandler }) {
   const inputStyles = {
@@ -23,4 +24,8 @@ export default function Input({ onChangeHandler }) {
       />
     </div>
   );
+}
+
+Input.propTypes = {
+  onChangeHandler: PropTypes.func,
 }
