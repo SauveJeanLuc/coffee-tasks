@@ -1,21 +1,31 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-export default function Input() {
+export default function Input({ onChangeHandler }) {
   const inputStyles = {
-    padding: '10px 0px',
-    border: '1px solid #611707',
-    borderRadius: '5px',
-    marginBottom: '10px',
-    width: '100%',
-  }
+    padding: "10px 0px",
+    border: "1px solid #611707",
+    borderRadius: "5px",
+    marginBottom: "10px",
+    width: "100%",
+  };
 
   const containerStyles = {
-    width: '100%',
-  }
+    width: "100%",
+  };
 
   return (
     <div style={containerStyles}>
-        <input type="text" style={inputStyles} placeholder="Add a new task" />
+      <input
+        onChange={onChangeHandler}
+        type="text"
+        style={inputStyles}
+        placeholder="Add a new task"
+      />
     </div>
-  )
+  );
+}
+
+Input.propTypes = {
+  onChangeHandler: PropTypes.func,
 }
