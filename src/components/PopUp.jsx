@@ -1,19 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SelectButton from "./atomic/SelectButton";
 import Input from "./atomic/Input";
 import Button from "./atomic/Button";
 import multiply from "../assets/multiply.svg";
 
-export default function PopUp() {
+
+
+export default function PopUp(props) {
   const [prevTasks, setPrevTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) ?? []
   );
   const [status, setStatus] = useState("");
   const [currentTask, setCurrentTask] = useState("");
 
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  )
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 768px)")
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
+
   const handleInputChange = (e) => {
     setCurrentTask(e.target.value);
   };
+
+  const handleClosePupUp = (e) => {
+    props.trigger(false)
+  }
+
 
   const addTask = () => {
     if (status == "" || currentTask == "") {
@@ -29,7 +45,8 @@ export default function PopUp() {
     }
   };
 
-  const popUpContainerStyles = {
+  var popUpContainerStyles = {
+    visibility: `${props.visible ? "visible" : "hidden"}`,
     position: "absolute",
     top: "0",
     left: "0",
@@ -43,7 +60,7 @@ export default function PopUp() {
   };
 
   const popUpSizer = {
-    width: "25%",
+    width: `${matches ? '40%' : '90%'}`,
   };
 
   const popUpStyles = {
@@ -70,6 +87,7 @@ export default function PopUp() {
     display: "flex",
     justifyContent: "center",
     marginLeft: "auto",
+    cursor: "pointer",
   };
 
   const closeLogoStyles = {
@@ -80,7 +98,9 @@ export default function PopUp() {
     <div style={popUpContainerStyles}>
       <div style={popUpSizer}>
         <div style={closeContainerStyles}>
-          <img src={multiply} style={closeLogoStyles} alt="logo" />
+          <img 
+          onClick={handleClosePupUp}
+          src={multiply} style={closeLogoStyles} alt="logo" />
         </div>
         <div style={popUpStyles}>
           <h2>Add TODO</h2>
@@ -97,6 +117,7 @@ export default function PopUp() {
               title={"Add Task"}
             />
             <Button
+              clickHandler={handleClosePupUp}
               margin={"0em 0.5em 0em 0em"}
               title={"Cancel"}
               isColorFlipped={true}
