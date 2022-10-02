@@ -20,7 +20,7 @@ export default function Input({ onChangeHandler }) {
         onChange={onChangeHandler}
         type="text"
         style={inputStyles}
-        placeholder="Add a new task"
+        placeholder=" Add a new task"
       />
     </div>
   );

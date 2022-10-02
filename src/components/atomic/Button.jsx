@@ -10,6 +10,7 @@ export default function Button({
   const [hover, setHover] = useState(false);
 
   const button = {
+    cursor: 'pointer',
     backgroundColor: isColorFlipped ? '#fff' : '#611707',
     color: isColorFlipped? '#611707' : '#fff',
     padding: '6px 12px',

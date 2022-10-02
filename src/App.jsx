@@ -21,7 +21,7 @@ function App() {
       <div style={divStyles}>
         <Nav />
         <ToDoContainer />
-        <PopUp />
+        
       </div>
     </>
   );
