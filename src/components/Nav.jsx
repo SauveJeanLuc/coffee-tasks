@@ -7,20 +7,12 @@ export default function Nav() {
 
   const [popUpvisible, setPopUpvisible] = useState(false)
 
-  const navStyles = {
-    display: "flex",
-    justifyContent: "space-between",
-    padding: "10px 20px",
-    backgroundColor: "#fff",
-    borderBottom: "1px solid #611707",
-  };
-
-  const handlePopUpOpen = (e) => {
+  const handlePopUpOpen = () => {
     setPopUpvisible(true)
   }
 
   return (
-    <div className="nav" style={navStyles}>
+    <div className="flex justify-between px-5 py-3 border-b-2 border-coffeeDark">
       <Button
       clickHandler={handlePopUpOpen}
       margin={"0em"} title={"Add task"} />
