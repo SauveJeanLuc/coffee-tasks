@@ -7,6 +7,9 @@ module.exports = {
         coffeeDark: "#611707",
         coffeeLight: "#F2E8D9",
         coffeePrimaryLight: "#E5D8D8"
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       }
     },
   },
