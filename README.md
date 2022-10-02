@@ -25,6 +25,10 @@ and real-world working app through the course of - [Hacktoberfest](https://hackt
 
 [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
 
+## Create issue
+
+If you want to create a new issue make sure to read [report_bug.md](.github/ISSUE_TEMPLATE/bug_report.md)
+
 ## Contributing
 
 Contributions are always welcome!
