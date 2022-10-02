@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SelectButton from "./atomic/SelectButton";
 import Input from "./atomic/Input";
 import Button from "./atomic/Button";
@@ -10,6 +10,15 @@ export default function PopUp() {
   );
   const [status, setStatus] = useState("");
   const [currentTask, setCurrentTask] = useState("");
+
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  )
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 768px)")
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
 
   const handleInputChange = (e) => {
     setCurrentTask(e.target.value);
@@ -43,7 +52,7 @@ export default function PopUp() {
   };
 
   const popUpSizer = {
-    width: "25%",
+    width: `${matches ? '40%' : '90%'}`,
   };
 
   const popUpStyles = {
