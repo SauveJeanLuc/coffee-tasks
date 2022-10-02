@@ -7,21 +7,21 @@
   "commitConvention": "angular",
   "contributors": [
     {
-
       "login": "SauveJeanLuc",
       "name": "SAUVÉ Jean-Luc",
       "avatar_url": "https://avatars.githubusercontent.com/u/68426990?v=4",
       "profile": "https://sauvejeanluc.tech/",
       "contributions": [
         "maintenance"
-
+      ]
+    },
+    {
       "login": "kubahasek",
       "name": "Jakub Hašek",
       "avatar_url": "https://avatars.githubusercontent.com/u/28836407?v=4",
       "profile": "https://github.com/kubahasek",
       "contributions": [
         "doc"
-
       ]
     }
   ],
