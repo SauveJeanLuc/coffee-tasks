@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import SelectButton from "./atomic/SelectButton";
 import Input from "./atomic/Input";
@@ -13,20 +14,11 @@ export default function PopUp(props) {
   const [status, setStatus] = useState("");
   const [currentTask, setCurrentTask] = useState("");
 
-  const [matches, setMatches] = useState(
-    window.matchMedia("(min-width: 768px)").matches
-  )
-  useEffect(() => {
-    window
-    .matchMedia("(min-width: 768px)")
-    .addEventListener('change', e => setMatches( e.matches ));
-  }, []);
-
   const handleInputChange = (e) => {
     setCurrentTask(e.target.value);
   };
 
-  const handleClosePupUp = (e) => {
+  const handleClosePupUp = () => {
     props.trigger(false)
   }
 
@@ -77,3 +69,7 @@ export default function PopUp(props) {
     </div>
   );
 }
+PopUp.propTypes = {
+  trigger: PropTypes.func,
+  visible: PropTypes.bool,
+};
