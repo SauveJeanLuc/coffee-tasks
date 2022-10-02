@@ -19,9 +19,9 @@ export default function Header() {
   };
 
   return (
-    <div style={headerStyles}>
+    <div className="flex justify-center my-4">
       <img src={coffeelogo} style={logoStyle} alt="logo" />
-      <span style={textStyle}>Coffee Tasks</span>
+      <span className="text-coffeeDark text-3xl font-extrabold">Coffee Tasks</span>
     </div>
   );
 }
