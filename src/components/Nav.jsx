@@ -14,8 +14,9 @@ export default function Nav() {
   return (
     <div className="flex justify-between px-5 py-2.5 border-b-2 border-coffeeDark">
       <Button
-      clickHandler={handlePopUpOpen}
-      margin={"0em"} title={"Add task"} />
+        clickHandler={handlePopUpOpen}
+        className="m-0"
+      title={"Add task"} />
       <SelectButton width={"155px"} />
       <PopUp visible={popUpvisible} trigger={setPopUpvisible}/>
     </div>
