@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SelectButton from "./atomic/SelectButton";
 import Input from "./atomic/Input";
 import Button from "./atomic/Button";
