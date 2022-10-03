@@ -10,7 +10,7 @@ export default function Button({ className, title, isColorFlipped, clickHandler 
           isColorFlipped
             ? `bg-white text-coffeeDark`
             : `bg-coffeeDark text-white`
-        }   hover:-translate-y-1 hover:shadow-md transition-all duration-500 ease-in hover:shadow-coffeeDark/40`}
+        }   hover:-translate-y-1 hover:shadow-md transition-all duration-300 ease-in hover:shadow-coffeeDark/40`}
       >
         {title}
       </button>
