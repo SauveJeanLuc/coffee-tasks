@@ -1,31 +1,31 @@
-# Coffee Tasks
+# Coffee Tasks :coffee:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 to React Beginners
+A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for React Beginners
 
 ![image](https://user-images.githubusercontent.com/68426990/192261187-84c1029b-686c-4549-a41d-9f23394a98a9.png)
 
-## **Description of the project:**
+## **Description of the project** :bell:
 
-The Next gen AI Powered Todo-List App.
+The Next Gen AI Powered Todo-List App.
 
-With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
+With the integration of GPT-3 APIs, your next task is suggested right away.
 
-One day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this.
-And you'll be part of the Impact 🙂.
+One day, somewhere, everyone in a coffee shop with a list of to-dos will be addicted to this.
+And you'll be part of the impact 🙂.
 
-Originally designed to help Beginner Front-End Devs build a solid
+Originally designed to help beginner front-end devs build a solid
 and real-world working app through the course of - [Hacktoberfest](https://hacktoberfest.com/).
 
-**All PRs To Be Merged From 1st October**
+:exclamation: **All PRs To Be Merged From 1st October** :exclamation:
 
-## UI/UX Design
+## UI/UX Design :art:
 
 [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
 
-## Contributing
+## Contributing :mega:
 
 Contributions are always welcome!
 
@@ -33,7 +33,11 @@ See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
 
-## Contributors
+## Authors :pencil2:
+
+- [@SauveJeanLuc](https://github.com/SauveJeanLuce)
+
+## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -50,13 +54,7 @@ Please adhere to this project's `code of conduct`.
 
 # <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## Authors
-
-- [@SauveJeanLuc](https://github.com/SauveJeanLuce)
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+### Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)): :arrow_right: 
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -76,5 +74,5 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+<br><br>
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
