@@ -34,52 +34,9 @@ export default function SelectButton({ width, setValue }) {
       color: "#611707",
     }),
   };
-
-  const buttonStyles = {
-    color: "#fff",
-    fontSize: "15px",
-    fontWeight: "600",
-    fontFamilly: "Poppins",
-    letterSpacing: "1px",
-    width: `${width}`,
-  };
-
-  // not used
-  // const colourStyles = {
-  //
-  //   control: (styles) => ({
-  //     ...styles,
-  //     border: '1px solid #611707',
-  //     padding: '3px 2px',
-  //   }),
-  //
-  //   option: (styles, {isDisabled, isFocused, isSelected, isFixed }) => {
-  //       return {
-  //         ...styles,
-  //         backgroundColor: (isFocused && isSelected) ? '#611707' : isFocused ? '#fff' : isSelected ? '#611707' :  isDisabled ? 'red' : isFixed ? 'green' : '#fff',
-  //         color: (isFocused && isSelected) ? '#fff' : isSelected ? '#fff' : '#611707',
-  //         ':active': {
-  //           ...styles[':active'],
-  //           backgroundColor: '#fff',
-  //         }
-  //       };
-  //   },
-  //
-  //   menu: () => ({
-  //     color: '#611707',
-  //     zIndex: 9999
-  //   }),
-  //
-  //   menuPortal: (styles) => ({
-  //     ...styles,
-  //     zIndex: 9999
-  //   }),
-  //
-  // };
-
   return (
     <>
-      <div style={buttonStyles}>
+      <div className={`text-white text-base font-semibold font-poppins tracking-widest w-[${width}]`}>
         <Select
           onChange={(newValue) => setValue(newValue)}
           options={[
