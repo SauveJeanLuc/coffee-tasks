@@ -7,9 +7,6 @@ import multiply from "../assets/multiply.svg";
 import { v4 as uuid } from "uuid";
 
 export default function PopUp(props) {
-  const [prevTasks, setPrevTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) ?? []
-  );
   const [status, setStatus] = useState("");
   const [currentTask, setCurrentTask] = useState("");
 
@@ -20,19 +17,19 @@ export default function PopUp(props) {
   const handleClosePupUp = () => {
     props.trigger(false);
   };
+  const defaultState = () => {
+    setStatus("");
+    setCurrentTask("");
+    props.trigger(false);
+  };
+  const addTask = (e) => {
+    e.preventDefault();
+    if (status === "" || currentTask === "")
+      return alert("both Title and status are mandatory !");
+    const newTodo = { title: currentTask, status: status.value, id: uuid() };
 
-  const addTask = () => {
-    if (status == "" || currentTask == "") {
-      alert("both Title and status are mandatory !");
-    } else {
-      const updatedTasks = [
-        ...prevTasks,
-        { title: currentTask, status: status.value, id: uuid() },
-      ];
-      setPrevTasks(updatedTasks);
-      localStorage.setItem("tasks", JSON.stringify(updatedTasks));
-      window.location.reload(false);
-    }
+    props.setTodos((state) => [...state, newTodo]);
+    defaultState();
   };
 
   return (
@@ -54,7 +51,7 @@ export default function PopUp(props) {
           <h2 className="font-extrabold text-lg">Add TODO</h2>
           <div className="flex flex-col pb-8">
             <label htmlFor="">Title</label>
-            <Input onChangeHandler={handleInputChange} />
+            <Input onChangeHandler={handleInputChange} value={currentTask} />
             <label htmlFor="">Status</label>
             <SelectButton setValue={setStatus} width={"100%"} />
           </div>
@@ -78,4 +75,5 @@ export default function PopUp(props) {
 PopUp.propTypes = {
   trigger: PropTypes.func,
   visible: PropTypes.bool,
+  setTodos: PropTypes.func,
 };

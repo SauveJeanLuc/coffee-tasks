@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Input({ onChangeHandler }) {
+export default function Input({ onChangeHandler, value }) {
   return (
     <div className="w-full">
       <input
@@ -9,6 +9,7 @@ export default function Input({ onChangeHandler }) {
         type="text"
         className="p-2 border-2 border-coffeeDark rounded-md w-full my-3"
         placeholder=" Add a new task"
+        value={value}
       />
     </div>
   );
@@ -16,4 +17,5 @@ export default function Input({ onChangeHandler }) {
 
 Input.propTypes = {
   onChangeHandler: PropTypes.func,
-}
+  value: PropTypes.string,
+};
