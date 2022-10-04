@@ -4,7 +4,7 @@ import SelectButton from "./atomic/SelectButton";
 import Input from "./atomic/Input";
 import Button from "./atomic/Button";
 import multiply from "../assets/multiply.svg";
-
+import { nanoid } from 'nanoid'
 
 
 export default function PopUp(props) {
@@ -29,7 +29,7 @@ export default function PopUp(props) {
     } else {
       const updatedTasks = [
         ...prevTasks,
-        { title: currentTask, status: status.value },
+        { id: nanoid(), title: currentTask, status: status.value },
       ];
       setPrevTasks(updatedTasks);
       localStorage.setItem("tasks", JSON.stringify(updatedTasks));
