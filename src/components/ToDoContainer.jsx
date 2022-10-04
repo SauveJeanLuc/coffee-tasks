@@ -1,9 +1,17 @@
 import React from "react";
+import { useTasks } from "../hooks/useTasks";
+import { ListTask } from "./ListTask";
+import { NoTask } from "./NoTask";
 
 export default function ToDoContainer() {
+  const { tasks } = useTasks();
+
   return (
-    <div className="bg-coffeePrimaryLight px-5 py-2.5 text-center rounded-md">
-      <span className="text-white font-semibold">No ToDos</span>
-    </div>
+    <>
+      {tasks.length === 0
+        ? <NoTask />
+        : <ListTask />}
+    </>
+      
   );
 }

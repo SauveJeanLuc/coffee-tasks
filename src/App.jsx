@@ -1,16 +1,17 @@
+
 import React from "react";
-import Header from "./components/Header";
-import Nav from "./components/Nav";
-import ToDoContainer from "./components/ToDoContainer";
+import { TaskProvider } from "./context/Task/TaskProvider";
+import { UiProvider } from "./context/ui/UiProvider";
+import { CoffeeTasks } from "./pages/CoffeeTasks";
 
 function App() {
   return (
     <>
-      <Header />
-      <div className="w-1/2 flex flex-col m-auto mt-12 bg-white rounded-md">
-        <Nav />
-        <ToDoContainer />
-      </div>
+    <UiProvider>
+        <TaskProvider>
+            <CoffeeTasks />
+        </TaskProvider>      
+    </UiProvider>
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Select from "react-select";
 import PropTypes from "prop-types";
 
-export default function SelectButton({ width, setValue }) {
+export default function SelectButton({ width, setValue, value }) {
   // styles to close button
   const customStyles = {
     control: (base, state) => ({
@@ -44,6 +44,7 @@ export default function SelectButton({ width, setValue }) {
             { value: "incomplete", label: "Incomplete" },
           ]}
           styles={customStyles}
+          value={value}
         />
       </div>
     </>
@@ -53,4 +54,5 @@ export default function SelectButton({ width, setValue }) {
 SelectButton.propTypes = {
   width: PropTypes.string,
   setValue: PropTypes.func,
+  value: PropTypes.string,
 }
