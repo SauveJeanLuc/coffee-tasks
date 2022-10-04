@@ -5,7 +5,7 @@
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
 
-![COFFEE-TASKS](hhttps://user-images.githubusercontent.com/73312468/193850169-0246522e-a3b0-49af-98f1-265a551e949b.gif)
+![COFFEE-TASKS](https://user-images.githubusercontent.com/73312468/193850169-0246522e-a3b0-49af-98f1-265a551e949b.gif)
 
  ## **Description of the project:**
 
