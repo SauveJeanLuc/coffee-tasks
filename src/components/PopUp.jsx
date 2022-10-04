@@ -4,8 +4,7 @@ import SelectButton from "./atomic/SelectButton";
 import Input from "./atomic/Input";
 import Button from "./atomic/Button";
 import multiply from "../assets/multiply.svg";
-
-
+import { v4 as uuid } from "uuid";
 
 export default function PopUp(props) {
   const [prevTasks, setPrevTasks] = useState(
@@ -19,9 +18,8 @@ export default function PopUp(props) {
   };
 
   const handleClosePupUp = () => {
-    props.trigger(false)
-  }
-
+    props.trigger(false);
+  };
 
   const addTask = () => {
     if (status == "" || currentTask == "") {
@@ -29,7 +27,7 @@ export default function PopUp(props) {
     } else {
       const updatedTasks = [
         ...prevTasks,
-        { title: currentTask, status: status.value },
+        { title: currentTask, status: status.value, id: uuid() },
       ];
       setPrevTasks(updatedTasks);
       localStorage.setItem("tasks", JSON.stringify(updatedTasks));
@@ -38,12 +36,19 @@ export default function PopUp(props) {
   };
 
   return (
-    <div className={`${props.visible ? `scale-100` : `scale-0`} flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center`}>
+    <div
+      className={`${
+        props.visible ? `scale-100` : `scale-0`
+      } flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center`}
+    >
       <div className={"w-4/5 max-w-sm"}>
         <div className="w-[10%] bg-coffeePrimaryLight mb-2 flex justify-center ml-auto cursor-pointer">
-          <img 
-          onClick={handleClosePupUp}
-          src={multiply} className="w-4/6" alt="logo" />
+          <img
+            onClick={handleClosePupUp}
+            src={multiply}
+            className="w-4/6"
+            alt="logo"
+          />
         </div>
         <div className="bg-coffeePrimaryLight rounded-md p-8 px-6 md:px-9">
           <h2 className="font-extrabold text-lg">Add TODO</h2>
