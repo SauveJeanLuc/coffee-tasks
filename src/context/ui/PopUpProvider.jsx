@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { UiContext } from  './UiContext';
+import { UiContext } from  './PopUpContext';
 import PropTypes from 'prop-types';
 
-export const UiProvider = ({ children }) => {
+export const PopUpProvider  = ({ children }) => {
 
     const [popUpvisible, setPopUpvisible] = useState(false)
 
@@ -22,6 +22,6 @@ export const UiProvider = ({ children }) => {
   )
 }
 
-UiProvider.propTypes = {
-    children: PropTypes.any
+PopUpProvider .propTypes = {
+   children: PropTypes.any
 }

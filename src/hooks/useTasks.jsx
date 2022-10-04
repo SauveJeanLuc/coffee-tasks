@@ -1,7 +1,7 @@
 
 import { useContext, useEffect } from 'react';
 import { TaskContext } from '../context/Task/TaskContext';
-import { UiContext } from '../context/ui/UiContext';
+import { PopUpContext } from '../context/ui/PopUpContext';
 
 export const useTasks = () => {
     const { tasks,
@@ -12,7 +12,7 @@ export const useTasks = () => {
         setCurrentTask,
     } = useContext(TaskContext);
 
-    const { handlePopUp } = useContext(UiContext);
+    const { handlePopUp } = useContext(PopUpContext);
 
     const handleInputChange = (e) => {
         setCurrentTask(e.target.value);

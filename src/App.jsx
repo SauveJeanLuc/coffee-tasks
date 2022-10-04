@@ -1,17 +1,17 @@
 
 import React from "react";
 import { TaskProvider } from "./context/Task/TaskProvider";
-import { UiProvider } from "./context/ui/UiProvider";
+import { PopUpProvider  } from "./context/ui/PopUpProvider";
 import { CoffeeTasks } from "./pages/CoffeeTasks";
 
 function App() {
   return (
     <>
-    <UiProvider>
+    <PopUpProvider >
         <TaskProvider>
             <CoffeeTasks />
         </TaskProvider>      
-    </UiProvider>
+    </PopUpProvider >
     </>
   );
 }
