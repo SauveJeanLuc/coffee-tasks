@@ -4,6 +4,7 @@ import { TaskContext } from './TaskContext';
 import PropTypes from 'prop-types';
 
 export const TaskProvider = ({ children }) => {
+  
   const [tasks, setTasks] = useState( JSON.parse(localStorage.getItem("tasks")) ?? [])
   const [status, setStatus] = useState("");
   const [currentTask, setCurrentTask] = useState("");
@@ -23,5 +24,5 @@ export const TaskProvider = ({ children }) => {
 }
 
 TaskProvider.propTypes = {
-    children: PropTypes.any
+  children: PropTypes.any
 }
