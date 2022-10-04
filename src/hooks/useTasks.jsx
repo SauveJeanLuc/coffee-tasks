@@ -2,6 +2,7 @@
 import { useContext, useEffect } from 'react';
 import { TaskContext } from '../context/Task/TaskContext';
 import { UiContext } from '../context/ui/UiContext';
+import { nanoid } from 'nanoid';
 
 export const useTasks = () => {
     const { tasks,
@@ -29,6 +30,7 @@ export const useTasks = () => {
         } else {
 
             const newTask = {
+                id: nanoid(),
                 title: currentTask,
                 status: status.value
             };

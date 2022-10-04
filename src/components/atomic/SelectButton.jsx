@@ -54,5 +54,5 @@ export default function SelectButton({ width, setValue, value }) {
 SelectButton.propTypes = {
   width: PropTypes.string,
   setValue: PropTypes.func,
-  value: PropTypes.string,
+  value: PropTypes.any,
 }
