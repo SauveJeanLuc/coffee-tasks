@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export const TaskItem = ({task}) => {
   return (
-    <div className="flex flex-col text-white font-semibold bg-gray-600 px-5 py-2.5 text-center rounded-md ">
+    <div className="flex flex-col text-white font-semibold bg-coffeeDark px-5 py-2.5 text-center rounded-md ">
       <div className="flex flex-col justify-center gap-y-2">
         <span>id: {task.id}</span>
         <span>title: {task.title}</span>
