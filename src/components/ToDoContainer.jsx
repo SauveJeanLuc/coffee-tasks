@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
-import Todo from "./Todo";
 export default function ToDoContainer() {
   const [todos, setTodos] = useState(
     JSON.parse(localStorage.getItem("todos")) ?? []

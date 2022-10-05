@@ -15,7 +15,7 @@ export default function PopUp(props) {
   };
 
   const handleClosePupUp = () => {
-    props.trigger(false);
+    defaultState();
   };
   const defaultState = () => {
     setStatus("");
