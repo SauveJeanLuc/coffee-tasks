@@ -8,8 +8,8 @@ import PopUp from "./PopUp";
 
 export default function Nav() {
   
-  const {  popUpvisible, handlePopUp } = useContext(PopUpContext);
-  const { setStatus } = useTasks();
+  const {  popUpvisible, handlePopUp, setPopUpvisible } = useContext(PopUpContext);
+  const { setStatus, setTodos } = useTasks();
 
   return (
     <div className="flex justify-between px-5 py-2.5 border-b-2 border-coffeeDark">
