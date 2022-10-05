@@ -2,24 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function Input({ onChangeHandler }) {
-  const inputStyles = {
-    padding: "10px 0px",
-    border: "1px solid #611707",
-    borderRadius: "5px",
-    marginBottom: "10px",
-    width: "100%",
-  };
-
-  const containerStyles = {
-    width: "100%",
-  };
-
   return (
-    <div style={containerStyles}>
+    <div className="w-full">
       <input
         onChange={onChangeHandler}
         type="text"
-        style={inputStyles}
+        className="p-2 border-2 border-coffeeDark rounded-md w-full my-3"
         placeholder=" Add a new task"
       />
     </div>

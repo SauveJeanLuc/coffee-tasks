@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
 import SelectButton from "./atomic/SelectButton";
 import Input from "./atomic/Input";
 import Button from "./atomic/Button";
@@ -13,20 +14,11 @@ export default function PopUp(props) {
   const [status, setStatus] = useState("");
   const [currentTask, setCurrentTask] = useState("");
 
-  const [matches, setMatches] = useState(
-    window.matchMedia("(min-width: 768px)").matches
-  )
-  useEffect(() => {
-    window
-    .matchMedia("(min-width: 768px)")
-    .addEventListener('change', e => setMatches( e.matches ));
-  }, []);
-
   const handleInputChange = (e) => {
     setCurrentTask(e.target.value);
   };
 
-  const handleClosePupUp = (e) => {
+  const handleClosePupUp = () => {
     props.trigger(false)
   }
 
@@ -45,80 +37,30 @@ export default function PopUp(props) {
     }
   };
 
-  var popUpContainerStyles = {
-    visibility: `${props.visible ? "visible" : "hidden"}`,
-    position: "absolute",
-    top: "0",
-    left: "0",
-    width: "100%",
-    height: "100%",
-    backgroundColor: "rgba(0,0,0,0.5)",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  };
-
-  const popUpSizer = {
-    width: `${matches ? '40%' : '90%'}`,
-  };
-
-  const popUpStyles = {
-    backgroundColor: '#E5D8D8',
-    borderRadius: '5px',
-    padding: '1em 2em 2em 2em',
-  }
-
-  const formStyles = {
-    display: "flex",
-    flexDirection: "column",
-    paddingBottom: "2em",
-  };
-
-  const buttonsStyles = {
-    display: "flex",
-  };
-
-  const closeContainerStyles = {
-    width: "10%",
-    backgroundColor: "#E5D8D8",
-    borderRadius: "2px",
-    marginBottom: "0.5em",
-    display: "flex",
-    justifyContent: "center",
-    marginLeft: "auto",
-    cursor: "pointer",
-  };
-
-  const closeLogoStyles = {
-    width: "70%",
-  };
-
   return (
-    <div style={popUpContainerStyles}>
-      <div style={popUpSizer}>
-        <div style={closeContainerStyles}>
+    <div className={`${props.visible ? `scale-100` : `scale-0`} flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center`}>
+      <div className={"w-4/5 max-w-sm"}>
+        <div className="w-[10%] bg-coffeePrimaryLight mb-2 flex justify-center ml-auto cursor-pointer">
           <img 
           onClick={handleClosePupUp}
-          src={multiply} style={closeLogoStyles} alt="logo" />
+          src={multiply} className="w-4/6" alt="logo" />
         </div>
-        <div style={popUpStyles}>
-          <h2>Add TODO</h2>
-          <div style={formStyles}>
+        <div className="bg-coffeePrimaryLight rounded-md p-8 px-6 md:px-9">
+          <h2 className="font-extrabold text-lg">Add TODO</h2>
+          <div className="flex flex-col pb-8">
             <label htmlFor="">Title</label>
             <Input onChangeHandler={handleInputChange} />
             <label htmlFor="">Status</label>
             <SelectButton setValue={setStatus} width={"100%"} />
           </div>
-          <div style={buttonsStyles}>
+          <div className="flex justify-between md:justify-start mt-2">
             <Button
               clickHandler={addTask}
-              margin={"0em 0.5em 0em 0em"}
               title={"Add Task"}
+              className="md:mr-9"
             />
             <Button
               clickHandler={handleClosePupUp}
-              margin={"0em 0.5em 0em 0em"}
               title={"Cancel"}
               isColorFlipped={true}
             />
@@ -128,3 +70,7 @@ export default function PopUp(props) {
     </div>
   );
 }
+PopUp.propTypes = {
+  trigger: PropTypes.func,
+  visible: PropTypes.bool,
+};

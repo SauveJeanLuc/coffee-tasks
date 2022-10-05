@@ -14,6 +14,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "aleksanderwalczuk",
+      "name": "Aleksander Walczuk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33238158?v=4",
+      "profile": "https://linkedin.com/in/aleksanderwalczuk/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
