@@ -8,7 +8,7 @@ export const TaskItem = ({ task }) => {
     <div className="flex flex-col text-white font-semibold bg-coffeeDark px-5 py-2.5 text-center rounded-md ">
       <div className="flex flex-col justify-center gap-y-2">
         <span>id: {task.id}</span>
-        <span>title: {task.title}</span>
+        <span className={`${task.status === 'complete' ? 'line-through' : ''}`}>title: {task.title}</span>
         <div>
           <span className={`bg-slate-400 px-1 rounded-md w-3`}>status: {task.status}</span>
         </div>
