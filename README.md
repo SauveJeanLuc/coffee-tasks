@@ -3,25 +3,25 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 to React Beginners
+### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
 
-![image](https://user-images.githubusercontent.com/68426990/192261187-84c1029b-686c-4549-a41d-9f23394a98a9.png)
+![COFFEE-TASKS](https://user-images.githubusercontent.com/73312468/194117721-5dd0f3fc-98e3-4827-b964-941446f1f014.gif)
 
-## **Description of the project:**
+ ## **Description of the project:**
 
-The Next gen AI Powered Todo-List App.
+<b>The Next Gen AI Powered Todo-List App.</b> 
+>With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
 
-With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
-
-One day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this.
+The goal for the project is that one day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this.
 And you'll be part of the Impact 🙂.
 
 Originally designed to help Beginner Front-End Devs build a solid
-and real-world working app through the course of - [Hacktoberfest](https://hacktoberfest.com/).
+and real-world working app through the course of - [Hacktoberfest'22](https://hacktoberfest.com/).
 
-**All PRs To Be Merged From 1st October**
+**All PRs To Be Merged From 1st October 2022**
 
 ## UI/UX Design
+We have made designs upon which our project is based:
 
 [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
 
@@ -36,6 +36,21 @@ Contributions are always welcome!
 See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
+## Installing and Running
+
+* Fork the repo.
+* Clone the repo by running the command below in your terminal:
+````console
+$ git clone https://github.com/your_username/coffee-tasks.git
+$ cd coffee-task
+````
+>Now you are in your cloned repo of coffee-task.
+* run the command below to install all the packages and to run coffee-task on localhost:
+````console
+$ npm install
+$ npm run
+````
+🥳 YAY! Now you can see coffee-task in your localhost port. 
 
 ## Contributors
 
@@ -53,7 +68,6 @@ Please adhere to this project's `code of conduct`.
     
   </tfoot>
 </table>
-
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
@@ -63,33 +77,10 @@ Please adhere to this project's `code of conduct`.
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
 
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
 # <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Authors
 
 - [@SauveJeanLuc](https://github.com/SauveJeanLuce)
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://github.com/kubahasek"><img src="https://avatars.githubusercontent.com/u/28836407?v=4?s=100" width="100px;" alt="Jakub Hašek"/><br /><sub><b>Jakub Hašek</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=kubahasek" title="Documentation">📖</a></td>
-    </tr>
-  </tbody>
-  <tfoot>
-    
-  </tfoot>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
