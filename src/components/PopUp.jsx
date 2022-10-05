@@ -13,11 +13,11 @@ export default function PopUp({ visible, trigger }) {
   const { setStatus, addTask, handleInputChange, resetFields, currentTask, status  } = useTasks();
 
   useEffect(() => {
-   if(!visible) {
+  if(!visible) {
       resetFields()
-   }
+  }
 
-   resetFields();
+  resetFields();
 
   }, [visible]);
 
