@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { UiContext } from  './PopUpContext';
+import { PopUpContext } from  './PopUpContext';
 import PropTypes from 'prop-types';
 
 export const PopUpProvider  = ({ children }) => {
@@ -13,12 +13,12 @@ export const PopUpProvider  = ({ children }) => {
     }
 
   return (
-    <UiContext.Provider value={{
+    <PopUpContext.Provider value={{
         popUpvisible,
         handlePopUp
     }}>
         {children}
-    </UiContext.Provider>
+    </PopUpContext.Provider>
   )
 }
 
