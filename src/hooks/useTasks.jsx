@@ -2,6 +2,7 @@
 import { useContext, useEffect } from 'react';
 import { TaskContext } from '../context/Task/TaskContext';
 import { PopUpContext } from '../context/ui/PopUpContext';
+import { v4 as uuidv4 } from 'uuid';
 
 export const useTasks = () => {
     const { tasks,
@@ -29,6 +30,7 @@ export const useTasks = () => {
         } else {
 
             const newTask = {
+                id: uuidv4(),
                 title: currentTask,
                 status: status.value
             };
