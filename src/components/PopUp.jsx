@@ -41,7 +41,7 @@ export default function PopUp(props) {
       style={{ zIndex: 9 }}
       className={`${
         props.visible ? `scale-100` : `scale-0`
-      } flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center`}
+      } flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center z-[9999]`}
     >
       <div className={"w-4/5 max-w-sm"}>
         <div className="w-[10%] bg-coffeePrimaryLight mb-2 flex justify-center ml-auto cursor-pointer">
