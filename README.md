@@ -1,6 +1,6 @@
 # Coffee Tasks
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
@@ -63,6 +63,7 @@ $ npm run
       <td align="center"><a href="https://github.com/kubahasek"><img src="https://avatars.githubusercontent.com/u/28836407?v=4?s=100" width="100px;" alt="Jakub Hašek"/><br /><sub><b>Jakub Hašek</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=kubahasek" title="Documentation">📖</a></td>
       <td align="center"><a href="https://linkedin.com/in/aleksanderwalczuk/"><img src="https://avatars.githubusercontent.com/u/33238158?v=4?s=100" width="100px;" alt="Aleksander Walczuk"/><br /><sub><b>Aleksander Walczuk</b></sub></a><br /><a href="#maintenance-aleksanderwalczuk" title="Maintenance">🚧</a></td>
       <td align="center"><a href="https://github.com/Tejax-v2"><img src="https://avatars.githubusercontent.com/u/92671877?v=4?s=100" width="100px;" alt="Tejax-v2"/><br /><sub><b>Tejax-v2</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Tejax-v2" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://dev.to/gismo1337"><img src="https://avatars.githubusercontent.com/u/6397577?v=4?s=100" width="100px;" alt="Sebastian"/><br /><sub><b>Sebastian</b></sub></a><br /><a href="#tool-Gismo1337" title="Tools">🔧</a></td>
     </tr>
   </tbody>
   <tfoot>

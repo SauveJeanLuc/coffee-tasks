@@ -32,6 +32,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Gismo1337",
+      "name": "Sebastian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6397577?v=4",
+      "profile": "https://dev.to/gismo1337",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
