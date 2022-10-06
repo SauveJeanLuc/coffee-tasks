@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import Nav from './Nav';
+import React, { useEffect, useState } from "react";
+import Nav from "./Nav";
 
 export default function ToDoContainer() {
-  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos')) ?? []);
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) ?? []
+  );
+
   // function addTodo(todo) {
   //   setTodos((state) => [...state, todo]);
   // }
@@ -23,8 +26,9 @@ export default function ToDoContainer() {
   //   });
   //   setTodos(newTodos);
   // }
+
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
+    localStorage.setItem("todos", JSON.stringify(todos));
     if (todos?.length) return;
   }, [todos]);
   return (
@@ -35,9 +39,9 @@ export default function ToDoContainer() {
           <span className="text-white font-semibold">No ToDos</span>
         ) : (
           <ul className="text-left">
-            {todos?.map(todo => (
+            {todos?.map((todo) => (
               <>
-                <li className="border-b-2 py-3 px-8 ">{todo.title}</li>
+                <li className="border-b-2 py-3 px-8">{todo.title}</li>
               </>
             ))}
           </ul>

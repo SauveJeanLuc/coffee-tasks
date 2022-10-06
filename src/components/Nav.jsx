@@ -19,7 +19,7 @@ export default function Nav({ setTodos }) {
       />
       <Button
         clickHandler={handlePopUpOpen}
-        className="m-0"
+        className="m-0 cursor-pointer"
         title={"Add task"}
       />
       <SelectButton width={"155px"} />

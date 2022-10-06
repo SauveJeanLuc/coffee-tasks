@@ -10,6 +10,7 @@ export default function SelectButton({ width, setValue }) {
       width: `${width}`,
       border: "1px solid #611707",
       borderRadius: "5px",
+      cursor: "pointer",
       boxShadow: state.isFocused ? null : null,
       "&:hover": {
         borderColor: "#611707",
@@ -19,6 +20,7 @@ export default function SelectButton({ width, setValue }) {
       ...base,
       backgroundColor: state.isFocused ? "#611707" : "#fff",
       color: state.isFocused ? "#fff" : "#611707",
+      cursor: "pointer",
       "&:active": {
         backgroundColor: "#611707",
         color: "#fff",
