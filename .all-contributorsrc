@@ -68,6 +68,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rahulkarda",
+      "name": "Rahul Karda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76204863?v=4",
+      "profile": "https://rahulkarda.me",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
