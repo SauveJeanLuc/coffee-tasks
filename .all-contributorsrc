@@ -23,6 +23,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Tejax-v2",
+      "name": "Tejax-v2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92671877?v=4",
+      "profile": "https://github.com/Tejax-v2",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
