@@ -79,13 +79,21 @@
       ]
     },
     {
-      "login": "RichardHpa",
-      "name": "RichardHpa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26518752?v=4",
-      "profile": "https://github.com/RichardHpa",
+      "login": "Prakhar-Goyal-3014",
+      "name": "Prakhar-Goyal-3014",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73887104?v=4",
+      "profile": "https://github.com/Prakhar-Goyal-3014",
       "contributions": [
-        "code",
-        "maintenance"
+        "code"
+      ]
+    },
+    {
+      "login": "RichardHpa",
+      "name": "Richard Hpa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26518752?v=4",
+      "profile": "http://www.richard-hpa.com",
+      "contributions": [
+        "code"
       ]
     }
   ],
