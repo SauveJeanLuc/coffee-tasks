@@ -5,7 +5,6 @@ export default function ToDoContainer() {
   const [todos, setTodos] = useState(
     JSON.parse(localStorage.getItem("todos")) ?? []
   );
-
   // function addTodo(todo) {
   //   setTodos((state) => [...state, todo]);
   // }
@@ -41,7 +40,7 @@ export default function ToDoContainer() {
           <ul className="text-left">
             {todos?.map((todo) => (
               <>
-                <li className="border-b-2 py-3 px-8">{todo.title}</li>
+                <li className="border-b-2 py-3 px-8 ">{todo.title}</li>
               </>
             ))}
           </ul>

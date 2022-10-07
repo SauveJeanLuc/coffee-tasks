@@ -1,6 +1,6 @@
 # Coffee Tasks
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
@@ -65,11 +65,13 @@ $ npm run
       <td align="center"><a href="https://github.com/Tejax-v2"><img src="https://avatars.githubusercontent.com/u/92671877?v=4?s=100" width="100px;" alt="Tejax-v2"/><br /><sub><b>Tejax-v2</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Tejax-v2" title="Documentation">📖</a></td>
       <td align="center"><a href="https://dev.to/gismo1337"><img src="https://avatars.githubusercontent.com/u/6397577?v=4?s=100" width="100px;" alt="Sebastian"/><br /><sub><b>Sebastian</b></sub></a><br /><a href="#tool-Gismo1337" title="Tools">🔧</a></td>
       <td align="center"><a href="http://thenishantsapkota.github.io"><img src="https://avatars.githubusercontent.com/u/60746512?v=4?s=100" width="100px;" alt="Nishant Sapkota"/><br /><sub><b>Nishant Sapkota</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=thenishantsapkota" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/manassahoo-dev"><img src="https://avatars.githubusercontent.com/u/6974223?v=4?s=100" width="100px;" alt="Manas Ranjan Sahoo"/><br /><sub><b>Manas Ranjan Sahoo</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=manassahoo-dev" title="Code">💻</a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/adnan-sameer-785103201/"><img src="https://avatars.githubusercontent.com/u/51002433?v=4?s=100" width="100px;" alt="Adnan Sameer"/><br /><sub><b>Adnan Sameer</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=adnansam110" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://rahulkarda.me"><img src="https://avatars.githubusercontent.com/u/76204863?v=4?s=100" width="100px;" alt="Rahul Karda"/><br /><sub><b>Rahul Karda</b></sub></a><br /><a href="#content-rahulkarda" title="Content">🖋</a></td>
     </tr>
   </tbody>
-  <tfoot>
-    
-  </tfoot>
 </table>
 
 <!-- markdownlint-restore -->
