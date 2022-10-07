@@ -6,7 +6,7 @@ export default function Button({ className, title, isColorFlipped, clickHandler 
     <div>
       <button
         onClick={clickHandler}
-        className={` ${className} cursor-pointer px-3 py-1.5 border font-poppins  border-coffeeDark rounded-md text-base font-semibold tracking-wide ${
+        className={` ${className} cursor-pointer px-[6px] py-1 border font-poppins  border-coffeeDark rounded-md text-base font-semibold tracking-wide ${
           isColorFlipped
             ? `bg-white text-coffeeDark`
             : `bg-coffeeDark text-white`
