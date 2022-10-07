@@ -77,6 +77,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "RichardHpa",
+      "name": "RichardHpa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26518752?v=4",
+      "profile": "https://github.com/RichardHpa",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
