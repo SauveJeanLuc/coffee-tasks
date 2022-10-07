@@ -1,6 +1,6 @@
 # Coffee Tasks
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
@@ -70,6 +70,7 @@ $ npm run
     </tr>
     <tr>
       <td align="center"><a href="https://rahulkarda.me"><img src="https://avatars.githubusercontent.com/u/76204863?v=4?s=100" width="100px;" alt="Rahul Karda"/><br /><sub><b>Rahul Karda</b></sub></a><br /><a href="#content-rahulkarda" title="Content">🖋</a></td>
+      <td align="center"><a href="https://github.com/Prakhar-Goyal-3014"><img src="https://avatars.githubusercontent.com/u/73887104?v=4?s=100" width="100px;" alt="Prakhar-Goyal-3014"/><br /><sub><b>Prakhar-Goyal-3014</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Prakhar-Goyal-3014" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
