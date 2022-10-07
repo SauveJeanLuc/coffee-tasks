@@ -23,6 +23,60 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Tejax-v2",
+      "name": "Tejax-v2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92671877?v=4",
+      "profile": "https://github.com/Tejax-v2",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Gismo1337",
+      "name": "Sebastian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6397577?v=4",
+      "profile": "https://dev.to/gismo1337",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "thenishantsapkota",
+      "name": "Nishant Sapkota",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60746512?v=4",
+      "profile": "http://thenishantsapkota.github.io",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "manassahoo-dev",
+      "name": "Manas Ranjan Sahoo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6974223?v=4",
+      "profile": "https://github.com/manassahoo-dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "adnansam110",
+      "name": "Adnan Sameer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51002433?v=4",
+      "profile": "https://www.linkedin.com/in/adnan-sameer-785103201/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "rahulkarda",
+      "name": "Rahul Karda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76204863?v=4",
+      "profile": "https://rahulkarda.me",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -36,7 +36,9 @@ export default function SelectButton({ width, setValue }) {
   };
   return (
     <>
-      <div className={`text-white text-base font-semibold font-poppins tracking-widest w-[${width}]`}>
+      <div
+        className={`text-white text-base font-semibold font-poppins tracking-widest w-[${width}]`}
+      >
         <Select
           onChange={(newValue) => setValue(newValue)}
           options={[
@@ -53,4 +55,4 @@ export default function SelectButton({ width, setValue }) {
 SelectButton.propTypes = {
   width: PropTypes.string,
   setValue: PropTypes.func,
-}
+};
