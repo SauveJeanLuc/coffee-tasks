@@ -17,13 +17,13 @@ export default function Nav({ setTodos }) {
         trigger={setPopUpvisible}
         setTodos={setTodos}
       />
-      <div className='w-[100%] flex justify-between align-middle'>
+      <div className="w-[100%] flex justify-between align-middle">
         <Button
           clickHandler={handlePopUpOpen}
-          className="mt-[2px] mr-3 text-[10px] lg:text-[18px]"
+          className="mt-[2px] mr-3 text-[8px] sm:text-[10px] lg:text-[16px]"
           title={'Add task'}
         />
-        <SelectButton width={'155px'} className="sm:w-10/12" />
+        <SelectButton className="w-[90px] sm:w-[155px]" />
       </div>
     </div>
   )

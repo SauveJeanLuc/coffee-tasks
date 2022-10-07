@@ -2,12 +2,12 @@ import React from "react";
 import Select from "react-select";
 import PropTypes from "prop-types";
 
-export default function SelectButton({ width, setValue }) {
+export default function SelectButton({ setValue }) {
   // styles to close button
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      width: `${width}`,
+      // width: `80px`,
       border: "1px solid #611707",
       borderRadius: "5px",
       boxShadow: state.isFocused ? null : null,
@@ -37,7 +37,7 @@ export default function SelectButton({ width, setValue }) {
   return (
     <>
       <div
-        className={`text-white text-base font-semibold font-poppins tracking-widest`}
+        className={`text-white text-xs font-semibold font-poppins tracking-widest sm:text-base`}
       >
         <Select
           onChange={(newValue) => setValue(newValue)}
