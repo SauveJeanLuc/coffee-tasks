@@ -1,37 +1,40 @@
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import SelectButton from "./atomic/SelectButton";
-import Input from "./atomic/Input";
-import Button from "./atomic/Button";
-import multiply from "../assets/multiply.svg";
-import { v4 as uuid } from "uuid";
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import SelectButton from './atomic/SelectButton';
+import Input from './atomic/Input';
+import Button from './atomic/Button';
+import multiply from '../assets/multiply.svg';
+import { v4 as uuid } from 'uuid';
 
-export default function PopUp(props) {
-  const [status, setStatus] = useState("");
-  const [currentTask, setCurrentTask] = useState("");
+const options = [
+  { value: 'complete', label: 'Complete' },
+  { value: 'incomplete', label: 'Incomplete' },
+];
+export default function PopUp({ trigger, setTodos, visible }) {
+  const [status, setStatus] = useState('');
+  const [currentTask, setCurrentTask] = useState('');
   const [error, setError] = useState(null);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     setCurrentTask(e.target.value);
   };
 
   const handleClosePupUp = () => {
     setError(null);
-    props.trigger(false);
+    trigger(false);
   };
   const defaultState = () => {
-    setStatus("");
-    setCurrentTask("");
+    setStatus('');
+    setCurrentTask('');
     setError(null);
-    props.trigger(false);
+    trigger(false);
   };
-  const addTask = (e) => {
+  const addTask = e => {
     e.preventDefault();
-    if (status === "" || currentTask === "")
-      setError("Both Title and status are mandatory!");
+    if (status === '' || currentTask === '') setError('Both Title and status are mandatory!');
     else {
       const newTodo = { title: currentTask, status: status.value, id: uuid() };
-      props.setTodos((state) => [...state, newTodo]);
+      setTodos(state => [...state, newTodo]);
       defaultState();
     }
   };
@@ -40,10 +43,10 @@ export default function PopUp(props) {
     <div
       style={{ zIndex: 9 }}
       className={`${
-        props.visible ? `scale-100` : `scale-0`
+        visible ? `scale-100` : `scale-0`
       } flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center z-[9999]`}
     >
-      <div className={"w-4/5 max-w-sm"}>
+      <div className={'w-4/5 max-w-sm'}>
         <div className="w-[10%] bg-coffeePrimaryLight mb-2 flex justify-center ml-auto cursor-pointer">
           <img onClick={handleClosePupUp} src={multiply} alt="Close" />
         </div>
@@ -68,9 +71,7 @@ export default function PopUp(props) {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              <div className="ml-3 text-sm font-medium text-red-700">
-                {error}
-              </div>
+              <div className="ml-3 text-sm font-medium text-red-700">{error}</div>
               <button
                 type="button"
                 className="ml-auto -mx-1.5 -my-1.5 bg-red-100 dark:bg-red-200 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 dark:hover:bg-red-300 inline-flex h-8 w-8"
@@ -88,25 +89,18 @@ export default function PopUp(props) {
             <label htmlFor="">Title</label>
             <Input onChangeHandler={handleInputChange} value={currentTask} />
             <label htmlFor="">Status</label>
-            <SelectButton setValue={setStatus} width={"100%"} />
+            <SelectButton setValue={setStatus} width="100%" options={options} />
           </div>
           <div className="flex justify-between md:justify-start mt-2">
-            <Button
-              clickHandler={addTask}
-              title={"Add Task"}
-              className="md:mr-9"
-            />
-            <Button
-              clickHandler={handleClosePupUp}
-              title={"Cancel"}
-              isColorFlipped={true}
-            />
+            <Button clickHandler={addTask} title={'Add Task'} className="md:mr-9" />
+            <Button clickHandler={handleClosePupUp} title={'Cancel'} isColorFlipped={true} />
           </div>
         </div>
       </div>
     </div>
   );
 }
+
 PopUp.propTypes = {
   trigger: PropTypes.func,
   visible: PropTypes.bool,
