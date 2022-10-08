@@ -1,15 +1,13 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 
-export default function Button({ className, title, isColorFlipped, clickHandler }) {
+export default function Button({ className, title, isColorFlipped, clickHandler = () => {} }) {
   return (
     <div>
       <button
         onClick={clickHandler}
         className={` ${className} cursor-pointer px-[6px] py-1 border font-poppins  border-coffeeDark rounded-md text-base font-semibold tracking-wide ${
-          isColorFlipped
-            ? `bg-white text-coffeeDark`
-            : `bg-coffeeDark text-white`
+          isColorFlipped ? `bg-white text-coffeeDark` : `bg-coffeeDark text-white`
         }   hover:-translate-y-1 hover:shadow-md transition-all duration-300 ease-in hover:shadow-coffeeDark/40`}
       >
         {title}
@@ -20,7 +18,7 @@ export default function Button({ className, title, isColorFlipped, clickHandler 
 
 Button.propTypes = {
   className: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   isColorFlipped: PropTypes.bool,
   clickHandler: PropTypes.func,
 };
