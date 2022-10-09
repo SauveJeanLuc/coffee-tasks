@@ -2,12 +2,12 @@ import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 
-export default function SelectButton({ setValue, options }) {
+export default function SelectButton({ onChange, options , defaultValue}) {
   // styles to close button
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      // width: `80px`,
+      width: `170px`,
       border: '1px solid #611707',
       borderRadius: '5px',
       boxShadow: state.isFocused ? null : null,
@@ -34,21 +34,31 @@ export default function SelectButton({ setValue, options }) {
       color: '#611707',
     }),
   };
+
   return (
     <>
       <div className={`text-white text-xs font-semibold font-poppins tracking-widest sm:text-base`}>
-        <Select onChange={newValue => setValue(newValue)} options={options} styles={customStyles} />
+        <Select onChange={onChange} 
+    
+        defaultValue={defaultValue} options={options} styles={customStyles} />
       </div>
     </>
   );
 }
 
 SelectButton.propTypes = {
-  setValue: PropTypes.func,
+  setFilter: PropTypes.func,
+  onChange: PropTypes.func,
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })
   ).isRequired,
+  defaultValue: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string,
+      label: PropTypes.string,
+    })
+  ),
 };
