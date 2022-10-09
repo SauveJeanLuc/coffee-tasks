@@ -11,7 +11,7 @@ const options = [
   { value: 'incomplete', label: 'Incomplete' },
 ];
 export default function PopUp({ trigger, setTodos, visible }) {
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState('incomplete');
   const [currentTask, setCurrentTask] = useState('');
   const [error, setError] = useState(null);
 
@@ -24,20 +24,20 @@ export default function PopUp({ trigger, setTodos, visible }) {
     trigger(false);
   };
   const defaultState = () => {
-    setStatus('');
+    setStatus('incomplete');
     setCurrentTask('');
     setError(null);
     trigger(false);
   };
   const addTask = e => {
     e.preventDefault();
-    if (status === '' || currentTask === '') setError('Both Title and status are mandatory!');
+    if (currentTask === '') setError('Please enter the title!');
     else {
-      const newTodo = { title: currentTask, status: status.value, id: uuid() };
+      const newTodo = { title: currentTask, status: status.value?status.value:status, id: uuid() };
       setTodos(state => [...state, newTodo]);
       defaultState();
-    }
-  };
+      }
+    };
 
   return (
     <div
@@ -89,7 +89,7 @@ export default function PopUp({ trigger, setTodos, visible }) {
             <label htmlFor="">Title</label>
             <Input onChangeHandler={handleInputChange} value={currentTask} />
             <label htmlFor="">Status</label>
-            <SelectButton width="100%" onChange={newValue => setStatus(newValue)}  options={options} />
+            <SelectButton width="100%" onChange={newValue => setStatus(newValue)}  options={options}  defaultValue={{ value: "incomplete", label: "Incomplete" }} />
           </div>
           <div className="flex justify-between md:justify-start mt-2">
             <Button clickHandler={addTask} title={'Add Task'} className="md:mr-9" />
