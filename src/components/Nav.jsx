@@ -25,7 +25,7 @@ export default function Nav({ setTodos, setFilter }) {
           className="mt-[2px] mr-3 text-[8px] sm:text-[10px] lg:text-[16px]"
           title="Add task"
         />
-        <SelectButton className="w-[90px] sm:w-[155px]" options={options} setFilter={setFilter} defaultValue={{ value: "all", label: "All" }} onChange={newValue => setFilter(newValue.value)} width='170px'/>
+        <SelectButton className="w-[90px] sm:w-[155px]" options={options} setFilter={setFilter} defaultValue={{ value: "all", label: "All" }} onChange={newValue => setFilter(newValue.value)} width='150px'/>
       </div>
     </div>
   );

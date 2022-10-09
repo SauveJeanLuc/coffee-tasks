@@ -7,7 +7,6 @@ export default function SelectButton({ onChange, options , defaultValue, width})
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      width: width,
       border: '1px solid #611707',
       borderRadius: '5px',
       boxShadow: state.isFocused ? null : null,
@@ -26,6 +25,7 @@ export default function SelectButton({ onChange, options , defaultValue, width})
     }),
     menu: base => ({
       ...base,
+      width: width,
       borderRadius: '5px',
       marginTop: '0px',
     }),
