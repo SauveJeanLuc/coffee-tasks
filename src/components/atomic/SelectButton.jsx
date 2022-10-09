@@ -2,12 +2,12 @@ import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 
-export default function SelectButton({ onChange, options , defaultValue}) {
+export default function SelectButton({ onChange, options , defaultValue, width}) {
   // styles to close button
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      width: `170px`,
+      width: width,
       border: '1px solid #611707',
       borderRadius: '5px',
       boxShadow: state.isFocused ? null : null,
@@ -55,6 +55,7 @@ SelectButton.propTypes = {
       label: PropTypes.string.isRequired,
     })
   ).isRequired,
+  width: PropTypes.string,
   defaultValue: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.string,
