@@ -24,7 +24,6 @@ export default function PopUp({ trigger, setTodos, visible }) {
     trigger(false);
   };
   const defaultState = () => {
-    setStatus('incomplete');
     setCurrentTask('');
     setError(null);
     trigger(false);
