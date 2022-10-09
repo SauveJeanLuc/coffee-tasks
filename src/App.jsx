@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       { isVisible 
-        ? <div className="w-[80%] m-auto mt-6 text-end">
+        ? <div className="w-[80%] m-auto mt-6 text-end md:w-[60%] lg:w-1/2">
             <Button clickHandler={promptToInstall} title="Install"/>
           </div>
         : ''
