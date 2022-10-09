@@ -2,12 +2,11 @@ import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 
-export default function SelectButton({ setValue, options }) {
+export default function SelectButton({ onChange, options , defaultValue, width}) {
   // styles to close button
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      // width: `80px`,
       border: '1px solid #611707',
       borderRadius: '5px',
       cursor:"pointer",
@@ -28,6 +27,7 @@ export default function SelectButton({ setValue, options }) {
     }),
     menu: base => ({
       ...base,
+      width: width,
       borderRadius: '5px',
       marginTop: '0px',
     }),
@@ -36,21 +36,32 @@ export default function SelectButton({ setValue, options }) {
       color: '#611707',
     }),
   };
+
   return (
     <>
       <div className={`text-white text-xs font-semibold font-poppins tracking-widest sm:text-base`}>
-        <Select onChange={newValue => setValue(newValue)} options={options} styles={customStyles} />
+        <Select onChange={onChange} 
+    
+        defaultValue={defaultValue} options={options} styles={customStyles} />
       </div>
     </>
   );
 }
 
 SelectButton.propTypes = {
-  setValue: PropTypes.func,
+  setFilter: PropTypes.func,
+  onChange: PropTypes.func,
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })
   ).isRequired,
+  width: PropTypes.string,
+  defaultValue: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string,
+      label: PropTypes.string,
+    })
+  ),
 };
