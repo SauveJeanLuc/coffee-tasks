@@ -4,5 +4,6 @@
 
 module.exports = {
   // `npx …` runs it from our local bin files
-  '**/*.{js,jsx}': 'npx eslint --fix',
+  '*.+(js|jsx|cjs)': 'eslint --fix',
+  '*.+(json|css|md)': 'prettier --write',
 };

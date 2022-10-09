@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint --ext .js,.jsx src/",
     "prepare": "husky install",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md|cjs)\""
   },
   "dependencies": {
     "prop-types": "^15.8.1",
@@ -24,6 +24,8 @@
     "@vitejs/plugin-react": "^2.1.0",
     "autoprefixer": "^10.4.12",
     "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
