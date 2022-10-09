@@ -89,7 +89,7 @@ export default function PopUp({ trigger, setTodos, visible }) {
             <label htmlFor="">Title</label>
             <Input onChangeHandler={handleInputChange} value={currentTask} />
             <label htmlFor="">Status</label>
-            <SelectButton setValue={setStatus} width="100%" options={options} />
+            <SelectButton width="100%" onChange={newValue => setStatus(newValue)}  options={options} />
           </div>
           <div className="flex justify-between md:justify-start mt-2">
             <Button clickHandler={addTask} title={'Add Task'} className="md:mr-9" />

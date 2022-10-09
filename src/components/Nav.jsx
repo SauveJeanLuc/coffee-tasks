@@ -5,10 +5,11 @@ import SelectButton from './atomic/SelectButton';
 import PopUp from './PopUp';
 
 const options = [
+  { value: 'all', label: 'All' },
   { value: 'complete', label: 'Complete' },
   { value: 'incomplete', label: 'Incomplete' },
 ];
-export default function Nav({ setTodos }) {
+export default function Nav({ setTodos, setFilter }) {
   const [popUpvisible, setPopUpvisible] = useState(false);
 
   const handlePopUpOpen = () => {
@@ -24,7 +25,7 @@ export default function Nav({ setTodos }) {
           className="mt-[2px] mr-3 text-[8px] sm:text-[10px] lg:text-[16px]"
           title="Add task"
         />
-        <SelectButton className="w-[90px] sm:w-[155px]" options={options} />
+        <SelectButton className="w-[90px] sm:w-[155px]" options={options} setFilter={setFilter} defaultValue={{ value: "all", label: "All" }} onChange={newValue => setFilter(newValue.value)}/>
       </div>
     </div>
   );
@@ -32,4 +33,5 @@ export default function Nav({ setTodos }) {
 
 Nav.propTypes = {
   setTodos: PropTypes.func.isRequired,
+  setFilter: PropTypes.func.isRequired,
 };

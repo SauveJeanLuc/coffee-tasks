@@ -31,20 +31,29 @@ export default function ToDoContainer() {
     localStorage.setItem('todos', JSON.stringify(todos));
     if (todos?.length) return;
   }, [todos]);
+  const [filter, setFilter] = useState("all")
+  const filteredList = todos?.map(todo => todo.status===filter?(
+    <li key={todo.id} className="border-b-2 py-3 px-8 flex justify-between">
+      <div className="font-semibold">{todo.title}</div>
+      <div className="font-light">{todo.status}</div>
+    </li>
+  ):'')
+  const allList = todos?.map(todo =>(
+    <li key={todo.id} className="border-b-2 py-3 px-8 flex justify-between">
+      <div className="font-semibold">{todo.title}</div>
+      <div className="font-light">{todo.status}</div>
+    </li>
+  ))
   return (
     <>
-      <Nav setTodos={setTodos} />
+      <Nav setTodos={setTodos} setFilter={setFilter}/>
       <div className="bg-coffeePrimaryLight px-5 py-2.5 text-center rounded-md">
         {!todos?.length ? (
           <span className="text-white font-semibold">No ToDos</span>
         ) : (
           <ul className="text-left">
-            {todos?.map(todo => (
-              <li key={todo.id} className="border-b-2 py-3 px-8 flex justify-between">
-                <div className="font-semibold">{todo.title}</div>
-                <div className="font-light">{todo.status}</div>
-              </li>
-            ))}
+            {filter==="all"? allList:
+            filteredList}
           </ul>
         )}
       </div>
