@@ -31,7 +31,7 @@ const pwaOptions = {
             "sizes":"512x512",
             "type":"image/png"
         },
-        {
+        {   
             "src":"/maskable_icon.png",
             "sizes":"512x512",
             "type":"image/png",

@@ -7,7 +7,7 @@ export function useAddToHomeScreenPrompt() {
         promptEvent: null,
     });
     const promptToInstall = () => {
-        if (prompt.state) {
+        if (prompt.promptEvent) {
             return prompt.promptEvent.prompt();
         }
         return Promise.reject(
@@ -21,7 +21,7 @@ export function useAddToHomeScreenPrompt() {
         const ready = (e) => {
             e.preventDefault();
             setState({
-                state: true,
+                state: (!prompt.state),
                 promptEvent: e,
             });
         };
