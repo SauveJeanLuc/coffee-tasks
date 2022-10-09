@@ -3,11 +3,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import react from "@vitejs/plugin-react";
 
 const pwaOptions = {
-  devOptions:{
-    enabled: true,
-    navigateFallback: 'index.html',
-  },
-  mode: 'development',
+  mode: 'production',
   base: '/',
   registerType: 'autoUpdate',
   includeAssets: ['favicon.ico'],
