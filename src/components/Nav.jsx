@@ -27,7 +27,7 @@ export default function Nav({ setTodos, setFilter }) {
         <Button
           clickHandler={handlePopUpOpen}
           className='mt-[2px] mr-3 text-[8px] sm:text-[10px] lg:text-[16px]'
-          title='+ Add Task'
+          title='Add Task'
         />
         <SelectButton
           className='w-[90px] sm:w-[155px]'

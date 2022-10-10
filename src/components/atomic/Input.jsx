@@ -11,7 +11,7 @@ export default function Input({
       <input
         onChange={onChangeHandler}
         type='text'
-        className='p-2 border-2 border-coffeeDark rounded-md w-full mb-3'
+        className='p-2 border-2 border-coffeeDark rounded-md w-full my-3'
         placeholder={placeholder}
         value={value}
       />

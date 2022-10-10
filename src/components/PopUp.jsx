@@ -50,15 +50,12 @@ export default function PopUp({ trigger, setTodos, visible }) {
       } flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center z-[9999]`}
     >
       <div className={'w-4/5 max-w-sm'}>
+        <div className='w-[10%] bg-coffeePrimaryLight mb-2 flex justify-center ml-auto cursor-pointer'>
+          <img onClick={handleClosePupUp} src={multiply} alt='Close' />
+        </div>
         <div className='bg-coffeePrimaryLight rounded-md p-8 px-6 md:px-9'>
-          <div className='flex md:justify-start '>
-            <h1 className='font-extrabold text-lg mb-2 text-coffeeDark'>
-              New Task
-            </h1>
-            <div className='w-[10%] bg-coffeePrimaryLight mb-2 flex justify-center ml-auto cursor-pointer'>
-              <img onClick={handleClosePupUp} src={multiply} alt='Close' />
-            </div>
-          </div>
+          <h2 className='font-extrabold text-lg mb-2'>New Task</h2>
+
           {error && (
             <div
               id='alert-border-2'
@@ -94,13 +91,9 @@ export default function PopUp({ trigger, setTodos, visible }) {
           )}
 
           <div className='flex flex-col pb-8'>
-            <label className='text-gray-500 font-extrabold' htmlFor=''>
-              Title
-            </label>
+            <label htmlFor=''>Title</label>
             <Input onChangeHandler={handleInputChange} value={currentTask} />
-            <label htmlFor='' className='text-gray-500 font-extrabold'>
-              Status
-            </label>
+            <label htmlFor=''>Status</label>
             <SelectButton
               width='100%'
               onChange={(newValue) => setStatus(newValue)}
@@ -108,11 +101,11 @@ export default function PopUp({ trigger, setTodos, visible }) {
               defaultValue={{ value: 'incomplete', label: 'Incomplete' }}
             />
           </div>
-          <div className='flex md:justify-start mt-2'>
+          <div className='flex justify-between md:justify-start mt-2'>
             <Button
               clickHandler={addTask}
-              title={'+ Add Task'}
-              className='mr-9'
+              title={'Add Task'}
+              className='md:mr-9'
             />
             <Button
               clickHandler={handleClosePupUp}
