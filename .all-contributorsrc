@@ -113,6 +113,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "RohanKaran",
+      "name": "Rohan Karan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38720754?v=4",
+      "profile": "http://rohankaran.github.io",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
