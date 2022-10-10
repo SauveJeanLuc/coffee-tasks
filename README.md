@@ -1,16 +1,20 @@
 # Coffee Tasks
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
 
 ![COFFEE-TASKS](https://user-images.githubusercontent.com/73312468/194117721-5dd0f3fc-98e3-4827-b964-941446f1f014.gif)
 
- ## **Description of the project:**
+## **Description of the project:**
 
-<b>The Next Gen AI Powered Todo-List App.</b> 
->With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
+<b>The Next Gen AI Powered Todo-List App.</b>
+
+> With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
 
 The goal for the project is that one day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this.
 And you'll be part of the Impact 🙂.
@@ -21,6 +25,7 @@ and real-world working app through the course of - [Hacktoberfest'22](https://ha
 **All PRs To Be Merged From 1st October 2022**
 
 ## UI/UX Design
+
 We have made designs upon which our project is based:
 
 [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
@@ -36,21 +41,27 @@ Contributions are always welcome!
 See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
+
 ## Installing and Running
 
-* Fork the repo.
-* Clone the repo by running the command below in your terminal:
-````console
+- Fork the repo.
+- Clone the repo by running the command below in your terminal:
+
+```console
 $ git clone https://github.com/your_username/coffee-tasks.git
 $ cd coffee-task
-````
->Now you are in your cloned repo of coffee-task.
-* run the command below to install all the packages and to run coffee-task on localhost:
-````console
+```
+
+> Now you are in your cloned repo of coffee-task.
+
+- run the command below to install all the packages and to run coffee-task on localhost:
+
+```console
 $ npm install
 $ npm run
-````
-🥳 YAY! Now you can see coffee-task in your localhost port. 
+```
+
+🥳 YAY! Now you can see coffee-task in your localhost port.
 
 ## Contributors
 
