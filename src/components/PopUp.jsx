@@ -11,6 +11,11 @@ const options = [
   { value: 'incomplete', label: 'Incomplete' },
 ];
 export default function PopUp({ trigger, setTodos, visible }) {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      return addTask(e);
+    }
+  };
   const [status, setStatus] = useState('incomplete');
   const [currentTask, setCurrentTask] = useState('');
   const [error, setError] = useState(null);
@@ -90,13 +95,17 @@ export default function PopUp({ trigger, setTodos, visible }) {
 
           <div className='flex flex-col pb-8'>
             <label htmlFor=''>Title</label>
-            <Input onChangeHandler={handleInputChange} value={currentTask} />
+            <Input
+              onChangeHandler={handleInputChange}
+              onKeyDownHandler={handleKeyDown}
+              value={currentTask}
+            />
             <label htmlFor=''>Status</label>
             <SelectButton
               width='100%'
               onChange={(newValue) => setStatus(newValue)}
               options={options}
-              defaultValue={{ value: 'incomplete', label: 'Incomplete' }}
+              defaultValue={options[0]}
             />
           </div>
           <div className='flex justify-between md:justify-start mt-2'>

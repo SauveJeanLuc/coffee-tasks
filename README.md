@@ -2,7 +2,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -84,6 +84,8 @@ $ npm run
       <td align="center"><a href="https://github.com/Prakhar-Goyal-3014"><img src="https://avatars.githubusercontent.com/u/73887104?v=4?s=100" width="100px;" alt="Prakhar-Goyal-3014"/><br /><sub><b>Prakhar-Goyal-3014</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Prakhar-Goyal-3014" title="Code">💻</a></td>
       <td align="center"><a href="http://www.richard-hpa.com"><img src="https://avatars.githubusercontent.com/u/26518752?v=4?s=100" width="100px;" alt="Richard Hpa"/><br /><sub><b>Richard Hpa</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RichardHpa" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/pobrebobby"><img src="https://avatars.githubusercontent.com/u/115002742?v=4?s=100" width="100px;" alt="pobrebobby"/><br /><sub><b>pobrebobby</b></sub></a><br /><a href="#design-pobrebobby" title="Design">🎨</a></td>
+      <td align="center"><a href="https://github.com/IncredibleZuess"><img src="https://avatars.githubusercontent.com/u/57303461?v=4?s=100" width="100px;" alt="IncredibleZuess"/><br /><sub><b>IncredibleZuess</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=IncredibleZuess" title="Code">💻</a></td>
+      <td align="center"><a href="https://sisirdhakal.vercel.app/"><img src="https://avatars.githubusercontent.com/u/62702558?v=4?s=100" width="100px;" alt="Sisir Dhakal (Saurav)"/><br /><sub><b>Sisir Dhakal (Saurav)</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sisirdhakal" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
