@@ -7,6 +7,18 @@ export default function ToDoContainer() {
     const initialValue = JSON.parse(savedTodos);
     return initialValue || [];
   });
+  function checkedOrNot(todo) {
+    if (todo.status === 'complete') {
+      return true;
+    } else return false
+  }
+  function checkboxhandler(e) {
+    const index = e.target.id;
+    var newTodos = [...todos]
+    newTodos[index].status = `${todos[index].status === 'complete' ? 'incomplete' : 'complete'}`
+    localStorage.setItem('todos', JSON.stringify(newTodos));
+    setTodos(newTodos)
+  }
   // function addTodo(todo) {
   //   setTodos((state) => [...state, todo]);
   // }
@@ -32,28 +44,46 @@ export default function ToDoContainer() {
     if (todos?.length) return;
   }, [todos]);
   const [filter, setFilter] = useState("all")
-  const filteredList = todos?.map(todo => todo.status===filter?(
+  const filteredList = todos?.map((todo, index) => todo.status === filter ? (
     <li key={todo.id} className="border-b-2 py-3 px-8 flex justify-between">
       <div className="font-semibold">{todo.title}</div>
-      <div className="font-light">{todo.status}</div>
+      <div className='flex space-x-2'>
+        <div className="font-light">{todo.status}</div>
+        <div> <input type="checkbox"
+          className = "accent-[#814b3f] h-5 w-5"
+          name="status"
+          id={index}
+          checked={checkedOrNot(todo)}
+          onChange={checkboxhandler} />
+        </div>
+      </div>
     </li>
-  ):'')
-  const allList = todos?.map(todo =>(
+  ) : '')
+  const allList = todos?.map((todo, index) => (
     <li key={todo.id} className="border-b-2 py-3 px-8 flex justify-between">
       <div className="font-semibold">{todo.title}</div>
-      <div className="font-light">{todo.status}</div>
+      <div className='flex space-x-2'>
+        <div className="font-light">{todo.status}</div>
+        <div> <input type="checkbox"
+          className = "accent-[#814b3f] h-5 w-5"
+          name="status"
+          id={index}
+          checked={checkedOrNot(todo)}
+          onChange={checkboxhandler} />
+        </div>
+      </div>
     </li>
   ))
   return (
     <>
-      <Nav setTodos={setTodos} setFilter={setFilter}/>
+      <Nav setTodos={setTodos} setFilter={setFilter} />
       <div className="bg-coffeePrimaryLight px-5 py-2.5 text-center rounded-md">
         {!todos?.length ? (
           <span className="text-white font-semibold">No ToDos</span>
         ) : (
           <ul className="text-left">
-            {filter==="all"? allList:
-            filteredList}
+            {filter === "all" ? allList :
+              filteredList}
           </ul>
         )}
       </div>
