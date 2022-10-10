@@ -16,13 +16,13 @@ export default function Nav({ setTodos }) {
   };
 
   return (
-    <div className="flex justify-between px-5 py-2.5 border-b-2 border-coffeeDark">
+    <div className="flex justify-between py-2.5 border-b-2 ">
       <PopUp visible={popUpvisible} trigger={setPopUpvisible} setTodos={setTodos} />
       <div className="w-[100%] flex justify-between align-middle">
         <Button
           clickHandler={handlePopUpOpen}
-          className="mt-[2px] mr-3 text-[8px] sm:text-[10px] lg:text-[16px]"
-          title="Add task"
+          className="mt-[2px] md:text-[15px] sm:text-[12px] lg:text-[18px] px-2 py-2"
+          title="+ Add task" 
         />
         <SelectButton className="w-[90px] sm:w-[155px]" options={options} />
       </div>
