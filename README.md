@@ -1,6 +1,6 @@
 # Coffee Tasks
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
@@ -74,6 +74,7 @@ $ npm run
       <td align="center"><a href="http://www.richard-hpa.com"><img src="https://avatars.githubusercontent.com/u/26518752?v=4?s=100" width="100px;" alt="Richard Hpa"/><br /><sub><b>Richard Hpa</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RichardHpa" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/pobrebobby"><img src="https://avatars.githubusercontent.com/u/115002742?v=4?s=100" width="100px;" alt="pobrebobby"/><br /><sub><b>pobrebobby</b></sub></a><br /><a href="#design-pobrebobby" title="Design">🎨</a></td>
       <td align="center"><a href="https://github.com/IncredibleZuess"><img src="https://avatars.githubusercontent.com/u/57303461?v=4?s=100" width="100px;" alt="IncredibleZuess"/><br /><sub><b>IncredibleZuess</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=IncredibleZuess" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/sahilyeole"><img src="https://avatars.githubusercontent.com/u/73148455?v=4?s=100" width="100px;" alt="Sahil Yeole"/><br /><sub><b>Sahil Yeole</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sahilyeole" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
