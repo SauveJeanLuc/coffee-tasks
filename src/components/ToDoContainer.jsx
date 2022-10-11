@@ -40,7 +40,9 @@ export default function ToDoContainer() {
       </li>
     ) : (
       ''
-    )
+
+    ),
+
   );
   const allList = todos?.map((todo) => (
     <li key={todo.id} className='border-b-2 py-3 px-8 flex justify-between'>
@@ -53,6 +55,7 @@ export default function ToDoContainer() {
       <Nav setTodos={setTodos} setFilter={setFilter} />
       <div className='bg-coffeePrimaryLight px-5 py-2.5 text-center rounded-md'>
         {!todos?.length ? (
+
           <span className='text-white font-semibold'>
             You have no tasks. Let&#39;s add a task to get started.
           </span>
@@ -60,6 +63,7 @@ export default function ToDoContainer() {
           <ul className='text-left'>
             {filter === 'all' ? allList : filteredList}
           </ul>
+
         )}
       </div>
     </>

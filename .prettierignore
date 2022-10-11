@@ -1,0 +1,4 @@
+.github/
+.husky/
+public
+node_modules/
