@@ -35,6 +35,7 @@ export default function ToDoContainer() {
     localStorage.setItem('todos', JSON.stringify(todos));
     if (todos?.length) return;
   }, [todos]);
+
   
   const style1={
    
@@ -80,8 +81,9 @@ export default function ToDoContainer() {
       <Nav setTodos={setTodos} />
       <div className="bg-coffeePrimaryLight px-5 py-2.5 text-center rounded-md h-100">
         {!todos?.length ? (
-          <span className="text-white font-semibold">No ToDos</span>
+          <span className='text-white font-semibold'>No ToDos</span>
         ) : (
+
           <ul className="text-left">
             {todos?.map(todo => (
               
@@ -103,6 +105,7 @@ export default function ToDoContainer() {
             
             ))}
           </ul>
+          
         )}
       </div>
     </>

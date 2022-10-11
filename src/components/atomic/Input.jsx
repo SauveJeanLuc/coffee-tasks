@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Input({ onChangeHandler, value, placeholder = 'Add a new task' }) {
+export default function Input({
+  onChangeHandler,
+  onKeyDownHandler,
+  value,
+  placeholder = 'Add a new task',
+}) {
   return (
-    <div className="w-full">
+    <div className='w-full'>
       <input
         onChange={onChangeHandler}
-        type="text"
-        className="p-2 border-2 border-coffeeDark rounded-md w-full my-3"
+        onKeyDown={onKeyDownHandler}
+        type='text'
+        className='p-2 border-2 border-coffeeDark rounded-md w-full my-3'
         placeholder={placeholder}
         value={value}
       />
@@ -17,6 +23,7 @@ export default function Input({ onChangeHandler, value, placeholder = 'Add a new
 
 Input.propTypes = {
   onChangeHandler: PropTypes.func,
+  onKeyDownHandler: PropTypes.func,
   value: PropTypes.string,
   placeholder: PropTypes.string,
 };
