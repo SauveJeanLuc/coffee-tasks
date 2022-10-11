@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Nav from './Nav';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons'
-import PopUp from './PopUp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 export default function ToDoContainer() {
   const [todos, setTodos] = useState(() => {
@@ -33,25 +32,24 @@ export default function ToDoContainer() {
   function checkedOrNot(todo) {
     if (todo.status === 'complete') {
       return true;
-    } else return false
+    } else return false;
   }
   function checkboxhandler(e) {
     const index = e.target.id;
-    var newTodos = [...todos]
-    newTodos[index].status = `${todos[index].status === 'complete' ? 'incomplete' : 'complete'}`
-    localStorage.setItem('todos', JSON.stringify(newTodos));
-    setTodos(newTodos)
-  }
-  function handleDelete(index){
-    var newTodos = [...todos]
-    newTodos.splice(index, 1)
+    var newTodos = [...todos];
+    newTodos[index].status = `${todos[index].status === 'complete' ? 'incomplete' : 'complete'}`;
     localStorage.setItem('todos', JSON.stringify(newTodos));
     setTodos(newTodos);
   }
-  function handleEdit(index){
-    var item = todos[index]
-    console.log("wtf")
-    return <PopUp />
+  function handleDelete(index) {
+    var newTodos = [...todos];
+    newTodos.splice(index, 1);
+    localStorage.setItem('todos', JSON.stringify(newTodos));
+    setTodos(newTodos);
+  }
+  function handleEdit(index) {
+    console.log(index);
+    return;
   }
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
@@ -61,17 +59,25 @@ export default function ToDoContainer() {
 
   const filteredList = todos?.map((todo, index) =>
     todo.status === filter ? (
-      <li key={todo.id} className="bg-white border-b-2 py-1 px-2 flex  rounded-lg mb-3 ml-auto mr-auto mt-4" style={{ "width": "40vw" }}>
+      <li
+        key={todo.id}
+        className='bg-white border-b-2 py-1 px-2 flex  rounded-lg mb-3 ml-auto mr-auto mt-4'
+        style={{ width: '40vw' }}
+      >
         <input
-          type="checkbox"
+          type='checkbox'
           className='h-7 w-7 mt-auto mb-auto mr-2 ml-2 rounded-full text-[#4d3434] focus:ring-[#757575]'
           id={index}
           checked={checkedOrNot(todo)}
           onChange={checkboxhandler}
         />
-        <div className="text-[#676767] font-bold mr-auto p-2">{todo.title}</div>
-        <div className='p-2 mr-4 cursor-pointer'>  <FontAwesomeIcon className='w-5 h-5' icon={faTrashCan} /></div>
-        <div className='p-2 cursor-pointer'>  <FontAwesomeIcon className='w-5 h-5' icon={faPenToSquare} /></div>
+        <div className='text-[#676767] font-bold mr-auto p-2'>{todo.title}</div>
+        <div className='p-2 mr-4 cursor-pointer'>
+          <FontAwesomeIcon className='w-5 h-5' icon={faTrashCan} />
+        </div>
+        <div className='p-2 cursor-pointer'>
+          <FontAwesomeIcon className='w-5 h-5' icon={faPenToSquare} />
+        </div>
       </li>
     ) : (
       ''
@@ -80,24 +86,34 @@ export default function ToDoContainer() {
 
   );
 
-
   const allList = todos?.map((todo, index) => (
-    <li key={todo.id} className="bg-white border-b-2 py-1 px-2 flex  rounded-lg mb-3 ml-auto mr-auto mt-4" style={{ "width": "40vw" }}>
-
+    <li
+      key={todo.id}
+      className='bg-white border-b-2 py-1 px-2 flex  rounded-lg mb-3 ml-auto mr-auto mt-4'
+      style={{ width: '40vw' }}
+    >
       <input
-        type="checkbox"
+        type='checkbox'
         className='h-7 w-7 mt-auto mb-auto mr-2 ml-2 rounded-full text-[#4d3434] focus:ring-[#757575]'
         id={index}
         checked={checkedOrNot(todo)}
         onChange={checkboxhandler}
       />
-      <div className="text-[#676767] font-bold mr-auto p-2">{todo.title}</div>
-      <div className='p-2 mr-4 cursor-pointer'>  <FontAwesomeIcon 
-      onClick={()=>handleDelete(index)}
-      className='w-5 h-5' icon={faTrashCan} /></div>
-      <div className='p-2 cursor-pointer'>  <FontAwesomeIcon 
-      onClick={()=>handleEdit(index)}
-      className='w-5 h-5' icon={faPenToSquare} /></div>
+      <div className='text-[#676767] font-bold mr-auto p-2'>{todo.title}</div>
+      <div className='p-2 mr-4 cursor-pointer'>
+        <FontAwesomeIcon
+          onClick={() => handleDelete(index)}
+          className='w-5 h-5'
+          icon={faTrashCan}
+        />
+      </div>
+      <div className='p-2 cursor-pointer'>
+        <FontAwesomeIcon
+          onClick={() => handleEdit(index)}
+          className='w-5 h-5'
+          icon={faPenToSquare}
+        />
+      </div>
     </li>
   ));
   return (
