@@ -102,8 +102,6 @@ export default function PopUp({ trigger, setTodos, visible }) {
           <div className='flex flex-col pb-8'>
             <label htmlFor=''>Title</label>
 
-            <Input onChangeHandler={handleInputChange} value={currentTask} />
-
             <Input
               onChangeHandler={handleInputChange}
               onKeyDownHandler={handleKeyDown}
