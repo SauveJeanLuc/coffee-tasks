@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Nav from './Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import PopUp from './PopUp';
 
 export default function ToDoContainer() {
+  var editTodo = null;
+  const [popUpvisible, setPopUpvisible] = useState(false);
+  const [editPopUp, setEditPopUp] = useState(null)
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem('todos');
     const initialValue = JSON.parse(savedTodos);
@@ -48,7 +52,9 @@ export default function ToDoContainer() {
     setTodos(newTodos);
   }
   function handleEdit(index) {
-    console.log(index);
+    setPopUpvisible(!popUpvisible)
+    setEditPopUp(todos[index])
+    // console.log(editTodo);
     return;
   }
   useEffect(() => {
@@ -87,39 +93,36 @@ export default function ToDoContainer() {
   );
 
   const allList = todos?.map((todo, index) => (
-    <li
-      key={todo.id}
-      className='bg-white border-b-2 py-1 px-2 flex  rounded-lg mb-3 ml-auto mr-auto mt-4'
-      style={{ width: '40vw' }}
-    >
-      <input
-        type='checkbox'
-        className='h-7 w-7 mt-auto mb-auto mr-2 ml-2 rounded-full text-[#4d3434] focus:ring-[#757575]'
-        id={index}
-        checked={checkedOrNot(todo)}
-        onChange={checkboxhandler}
-      />
-      <div className='text-[#676767] font-bold mr-auto p-2'>{todo.title}</div>
-      <div className='p-2 mr-4 cursor-pointer'>
-        <FontAwesomeIcon
-          onClick={() => handleDelete(index)}
-          className='w-5 h-5'
-          icon={faTrashCan}
+    <div key={index} className='px-2'>
+      <li
+        key={todo.id}
+        className='bg-white items-center border-b-2 py-0 md:py-2 px-2 md:px-5 flex rounded-lg mb-3 ml-auto mr-auto mt-4'
+      >
+        <input
+          type='checkbox'
+          className='h-4 w-4 md:h-7 md:w-7 mt-auto mb-auto mr-2 ml-2 rounded-full text-[#4d3434] focus:ring-[#757575]'
+          id={index}
+          checked={checkedOrNot(todo)}
+          onChange={checkboxhandler}
         />
-      </div>
-      <div className='p-2 cursor-pointer'>
-        <FontAwesomeIcon
-          onClick={() => handleEdit(index)}
-          className='w-5 h-5'
-          icon={faPenToSquare}
-        />
-      </div>
-    </li>
+        <div className='text-[#676767] font-light md:font-bold mr-auto p-2 md:text-sm text-[12px]'>{todo.title}</div>
+        <div className='text-[13.5px] md:text-base cursor-pointer md:space-x-12 space-x-4 justify-items-center flex '>
+          <FontAwesomeIcon
+            onClick={() => handleDelete(index)}
+            icon={faTrashCan}
+          />
+          <FontAwesomeIcon
+            onClick={() => handleEdit(index)}
+            icon={faPenToSquare}
+          />
+        </div>
+      </li>
+    </div>
   ));
   return (
     <>
       <Nav setTodos={setTodos} setFilter={setFilter} />
-      <div className='bg-coffeePrimaryLight px-5 py-2.5 text-center rounded-md'>
+      <div className='bg-coffeePrimaryLight py-1 text-center rounded-md md:py-2.5 md:px-2'>
         {!todos?.length ? (
 
           <span className='text-white font-semibold'>
@@ -132,6 +135,7 @@ export default function ToDoContainer() {
 
         )}
       </div>
+      {popUpvisible && <PopUp visible={popUpvisible} trigger={setPopUpvisible} setTodos={setTodos} todos={todos} editTodo={editPopUp} /> }
     </>
   );
 }

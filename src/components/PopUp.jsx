@@ -10,14 +10,14 @@ const options = [
   { value: 'complete', label: 'Complete' },
   { value: 'incomplete', label: 'Incomplete' },
 ];
-export default function PopUp({ trigger, setTodos, visible }) {
+export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       return addTask(e);
     }
   };
-  const [status, setStatus] = useState('incomplete');
-  const [currentTask, setCurrentTask] = useState('');
+  const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
+  const [currentTask, setCurrentTask] = useState(editTodo ? editTodo.title : '');
   const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
@@ -33,6 +33,23 @@ export default function PopUp({ trigger, setTodos, visible }) {
     setError(null);
     trigger(false);
   };
+  const editTask = (e) => {
+    e.preventDefault();
+    if (currentTask === '') setError('Please enter the title!');
+    else {
+      const newTodo = {
+        title: currentTask,
+        status: status.value ? status.value : status,
+        id: uuid(),
+      };
+      var newTodos = [...todos];
+      const editTodoIndex = todos.findIndex(obj => obj.id === editTodo.id)
+      newTodos[editTodoIndex] = newTodo;
+      setTodos(newTodos);
+      defaultState();
+    }
+    
+  }
   const addTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');
@@ -103,6 +120,7 @@ export default function PopUp({ trigger, setTodos, visible }) {
             <label htmlFor=''>Title</label>
 
             <Input
+              class='text-3xl'
               onChangeHandler={handleInputChange}
               onKeyDownHandler={handleKeyDown}
               value={currentTask}
@@ -113,10 +131,14 @@ export default function PopUp({ trigger, setTodos, visible }) {
               width='100%'
               onChange={(newValue) => setStatus(newValue)}
               options={options}
-
-              defaultValue={{ value: 'incomplete', label: 'Incomplete' }}
+              defaultValue={options[1]}
             />
           </div>
+          {/* COnditionally render relavent buttons */}
+          {editTodo ? 
+          <div className='text-center'>
+            <Button clickHandler={editTask} title={'Edit Task'} className='md:mr-9' />
+          </div> :
           <div className='flex justify-between md:justify-start mt-2'>
             <Button
               clickHandler={addTask}
@@ -130,7 +152,7 @@ export default function PopUp({ trigger, setTodos, visible }) {
             />
 
 
-          </div>
+          </div>}
         </div>
       </div>
     </div>
@@ -141,4 +163,5 @@ PopUp.propTypes = {
   trigger: PropTypes.func,
   visible: PropTypes.bool,
   setTodos: PropTypes.func,
+  editTodo: PropTypes.object
 };
