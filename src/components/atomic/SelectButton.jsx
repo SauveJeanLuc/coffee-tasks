@@ -45,6 +45,7 @@ export default function SelectButton({ onChange, options, defaultValue, width })
           defaultValue={defaultValue}
           options={options}
           styles={customStyles}
+          isSearchable={false}
         />
       </div>
     </>

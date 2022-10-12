@@ -13,7 +13,8 @@ const options = [
 export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      return addTask(e);
+      if (editTodo) return editTask(e);
+      else return addTask(e);
     }
   };
   const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
@@ -135,8 +136,8 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
           </div>
           {/* COnditionally render relavent buttons */}
           {editTodo ? (
-            <div className='flex justify-between px-[5%]'>
-              <Button clickHandler={editTask} title={'Edit Task'} />
+            <div className='flex justify-between md:justify-start mt-2'>
+              <Button clickHandler={editTask} title={'Edit Task'} className='md:mr-9' />
               <Button clickHandler={handleClosePupUp} title={'Cancel'} isColorFlipped={true} />
             </div>
           ) : (
