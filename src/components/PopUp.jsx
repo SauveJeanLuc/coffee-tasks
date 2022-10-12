@@ -135,8 +135,9 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
           </div>
           {/* COnditionally render relavent buttons */}
           {editTodo ? (
-            <div className='text-center'>
-              <Button clickHandler={editTask} title={'Edit Task'} className='md:mr-9' />
+            <div className='flex justify-between px-[5%]'>
+              <Button clickHandler={editTask} title={'Edit Task'} />
+              <Button clickHandler={handleClosePupUp} title={'Cancel'} isColorFlipped={true} />
             </div>
           ) : (
             <div className='flex justify-between md:justify-start mt-2'>
