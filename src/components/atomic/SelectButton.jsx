@@ -10,13 +10,14 @@ export default function SelectButton({ onChange, options, defaultValue, width })
       border: '1px solid #611707',
       borderRadius: '5px',
       cursor: 'pointer',
-      boxShadow: state.isFocused ? null : null,
+      boxShadow: state.isFocused ? 'none' : 'none',
       '&:hover': {
         borderColor: '#611707',
       },
     }),
     option: (base, state) => ({
       ...base,
+      border: 0,
       backgroundColor: state.isFocused ? '#611707' : '#fff',
       cursor: 'pointer',
       color: state.isFocused ? '#fff' : '#611707',
@@ -27,12 +28,14 @@ export default function SelectButton({ onChange, options, defaultValue, width })
     }),
     menu: (base) => ({
       ...base,
+      border: 0,
       width: width,
       borderRadius: '5px',
       marginTop: '0px',
     }),
     singleValue: (base) => ({
       ...base,
+      border: 0,
       color: '#611707',
     }),
   };
@@ -45,7 +48,6 @@ export default function SelectButton({ onChange, options, defaultValue, width })
           defaultValue={defaultValue}
           options={options}
           styles={customStyles}
-          isSearchable={false}
         />
       </div>
     </>
