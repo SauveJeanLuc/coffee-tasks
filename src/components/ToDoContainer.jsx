@@ -5,9 +5,8 @@ import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import PopUp from './PopUp';
 
 export default function ToDoContainer() {
-  var editTodo = null;
   const [popUpvisible, setPopUpvisible] = useState(false);
-  const [editPopUp, setEditPopUp] = useState(null)
+  const [editPopUp, setEditPopUp] = useState(null);
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem('todos');
     const initialValue = JSON.parse(savedTodos);
@@ -52,8 +51,8 @@ export default function ToDoContainer() {
     setTodos(newTodos);
   }
   function handleEdit(index) {
-    setPopUpvisible(!popUpvisible)
-    setEditPopUp(todos[index])
+    setPopUpvisible(!popUpvisible);
+    setEditPopUp(todos[index]);
     // console.log(editTodo);
     return;
   }
@@ -105,16 +104,12 @@ export default function ToDoContainer() {
           checked={checkedOrNot(todo)}
           onChange={checkboxhandler}
         />
-        <div className='text-[#676767] font-light md:font-bold mr-auto p-2 md:text-sm text-[12px]'>{todo.title}</div>
+        <div className='text-[#676767] font-light md:font-bold mr-auto p-2 md:text-sm text-[12px]'>
+          {todo.title}
+        </div>
         <div className='text-[13.5px] md:text-base cursor-pointer md:space-x-12 space-x-4 justify-items-center flex '>
-          <FontAwesomeIcon
-            onClick={() => handleDelete(index)}
-            icon={faTrashCan}
-          />
-          <FontAwesomeIcon
-            onClick={() => handleEdit(index)}
-            icon={faPenToSquare}
-          />
+          <FontAwesomeIcon onClick={() => handleDelete(index)} icon={faTrashCan} />
+          <FontAwesomeIcon onClick={() => handleEdit(index)} icon={faPenToSquare} />
         </div>
       </li>
     </div>
@@ -135,7 +130,15 @@ export default function ToDoContainer() {
 
         )}
       </div>
-      {popUpvisible && <PopUp visible={popUpvisible} trigger={setPopUpvisible} setTodos={setTodos} todos={todos} editTodo={editPopUp} /> }
+      {popUpvisible && (
+        <PopUp
+          visible={popUpvisible}
+          trigger={setPopUpvisible}
+          setTodos={setTodos}
+          todos={todos}
+          editTodo={editPopUp}
+        />
+      )}
     </>
   );
 }

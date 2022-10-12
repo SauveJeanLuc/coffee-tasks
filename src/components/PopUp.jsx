@@ -43,13 +43,12 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
         id: uuid(),
       };
       var newTodos = [...todos];
-      const editTodoIndex = todos.findIndex(obj => obj.id === editTodo.id)
+      const editTodoIndex = todos.findIndex((obj) => obj.id === editTodo.id);
       newTodos[editTodoIndex] = newTodo;
       setTodos(newTodos);
       defaultState();
     }
-    
-  }
+  };
   const addTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');
@@ -135,24 +134,26 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
             />
           </div>
           {/* COnditionally render relavent buttons */}
-          {editTodo ? 
-          <div className='text-center'>
-            <Button clickHandler={editTask} title={'Edit Task'} className='md:mr-9' />
-          </div> :
-          <div className='flex justify-between md:justify-start mt-2'>
-            <Button
+          {editTodo ? (
+            <div className='text-center'>
+              <Button clickHandler={editTask} title={'Edit Task'} className='md:mr-9' />
+            </div>
+          ) : (
+            <div className='flex justify-between md:justify-start mt-2'>
+              <Button
               clickHandler={addTask}
               title={'Add Task'}
               className='md:mr-9'
             />
-            <Button
+              <Button
               clickHandler={handleClosePupUp}
               title={'Cancel'}
               isColorFlipped={true}
             />
+  
 
-
-          </div>}
+          </div>
+          )}
         </div>
       </div>
     </div>
@@ -163,5 +164,6 @@ PopUp.propTypes = {
   trigger: PropTypes.func,
   visible: PropTypes.bool,
   setTodos: PropTypes.func,
-  editTodo: PropTypes.object
+  editTodo: PropTypes.object,
+  todos: PropTypes.array,
 };
