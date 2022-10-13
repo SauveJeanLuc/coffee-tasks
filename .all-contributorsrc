@@ -131,6 +131,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "gaber85",
+      "name": "Gabe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20451159?v=4",
+      "profile": "https://www.sharesight.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
