@@ -90,6 +90,7 @@ $ npm run
       <td align="center"><a href="https://github.com/suryansh-bhatnagar"><img src="https://avatars.githubusercontent.com/u/90460257?v=4?s=100" width="100px;" alt="suryansh-bhatnagar"/><br /><sub><b>suryansh-bhatnagar</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=suryansh-bhatnagar" title="Code">💻</a></td>
       <td align="center"><a href="https://www.sharesight.com/"><img src="https://avatars.githubusercontent.com/u/20451159?v=4?s=100" width="100px;" alt="Gabe"/><br /><sub><b>Gabe</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=gaber85" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Onyelaudochukwuka"><img src="https://avatars.githubusercontent.com/u/82924100?v=4?s=100" width="100px;" alt="Onyela Udochukwuka"/><br /><sub><b>Onyela Udochukwuka</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Onyelaudochukwuka" title="Code">💻</a></td>
+      <td align="center"><a href="http://rohankaran.github.io"><img src="https://avatars.githubusercontent.com/u/38720754?v=4?s=100" width="100px;" alt="Rohan Karan"/><br /><sub><b>Rohan Karan</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RohanKaran" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
