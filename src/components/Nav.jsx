@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from './atomic/Button';
 import SelectButton from './atomic/SelectButton';
 import PopUp from './PopUp';

@@ -1,4 +1,3 @@
-import React from 'react';
 import coffeelogo from '../assets/coffee-to-go.svg';
 
 export default function Header() {
