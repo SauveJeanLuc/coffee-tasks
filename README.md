@@ -1,7 +1,7 @@
 # Coffee Tasks
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
@@ -83,14 +83,15 @@ $ npm run
       <td align="center"><a href="http://www.richard-hpa.com"><img src="https://avatars.githubusercontent.com/u/26518752?v=4?s=100" width="100px;" alt="Richard Hpa"/><br /><sub><b>Richard Hpa</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RichardHpa" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/pobrebobby"><img src="https://avatars.githubusercontent.com/u/115002742?v=4?s=100" width="100px;" alt="pobrebobby"/><br /><sub><b>pobrebobby</b></sub></a><br /><a href="#design-pobrebobby" title="Design">🎨</a></td>
       <td align="center"><a href="https://github.com/IncredibleZuess"><img src="https://avatars.githubusercontent.com/u/57303461?v=4?s=100" width="100px;" alt="IncredibleZuess"/><br /><sub><b>IncredibleZuess</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=IncredibleZuess" title="Code">💻</a></td>
-      <td align="center"><a href="https://sisirdhakal.vercel.app/"><img src="https://avatars.githubusercontent.com/u/62702558?v=4?s=100" width="100px;" alt="Sisir Dhakal (Saurav)"/><br /><sub><b>Sisir Dhakal (Saurav)</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sisirdhakal" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/ChahineBendjeddou"><img src="https://avatars.githubusercontent.com/u/83044371?v=4?s=100" width="100px;" alt="Chahine Bendjeddou"/><br /><sub><b>Chahine Bendjeddou</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=ChahineBendjeddou" title="Code">💻</a></td>
+      <td align="center"><a href="http://rohankaran.github.io"><img src="https://avatars.githubusercontent.com/u/38720754?v=4?s=100" width="100px;" alt="Rohan Karan"/><br /><sub><b>Rohan Karan</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RohanKaran" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/Onyelaudochukwuka"><img src="https://avatars.githubusercontent.com/u/82924100?v=4?s=100" width="100px;" alt="Onyela Udochukwuka"/><br /><sub><b>Onyela Udochukwuka</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Onyelaudochukwuka" title="Code">💻</a></td>
     </tr>
     <tr>
+      <td align="center"><a href="https://sisirdhakal.vercel.app/"><img src="https://avatars.githubusercontent.com/u/62702558?v=4?s=100" width="100px;" alt="Sisir Dhakal (Saurav)"/><br /><sub><b>Sisir Dhakal (Saurav)</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sisirdhakal" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/ChahineBendjeddou"><img src="https://avatars.githubusercontent.com/u/83044371?v=4?s=100" width="100px;" alt="Chahine Bendjeddou"/><br /><sub><b>Chahine Bendjeddou</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=ChahineBendjeddou" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/suryansh-bhatnagar"><img src="https://avatars.githubusercontent.com/u/90460257?v=4?s=100" width="100px;" alt="suryansh-bhatnagar"/><br /><sub><b>suryansh-bhatnagar</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=suryansh-bhatnagar" title="Code">💻</a></td>
       <td align="center"><a href="https://www.sharesight.com/"><img src="https://avatars.githubusercontent.com/u/20451159?v=4?s=100" width="100px;" alt="Gabe"/><br /><sub><b>Gabe</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=gaber85" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/Onyelaudochukwuka"><img src="https://avatars.githubusercontent.com/u/82924100?v=4?s=100" width="100px;" alt="Onyela Udochukwuka"/><br /><sub><b>Onyela Udochukwuka</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Onyelaudochukwuka" title="Code">💻</a></td>
-      <td align="center"><a href="http://rohankaran.github.io"><img src="https://avatars.githubusercontent.com/u/38720754?v=4?s=100" width="100px;" alt="Rohan Karan"/><br /><sub><b>Rohan Karan</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RohanKaran" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/aritroCoder"><img src="https://avatars.githubusercontent.com/u/92646038?v=4?s=100" width="100px;" alt="Aritra Bhaduri"/><br /><sub><b>Aritra Bhaduri</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=aritroCoder" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
