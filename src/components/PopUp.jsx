@@ -59,7 +59,9 @@ export default function PopUp({ trigger, setTodos, visible }) {
           <img onClick={handleClosePupUp} src={multiply} alt='Close' />
         </div>
         <div className='bg-coffeePrimaryLight rounded-md p-8 px-6 md:px-9'>
-          <h2 className='font-extrabold text-lg mb-2'>Add TODO</h2>
+
+          <h2 className='font-extrabold text-lg mb-2'>New Task</h2>
+
 
           {error && (
             <div
@@ -79,7 +81,11 @@ export default function PopUp({ trigger, setTodos, visible }) {
                   clipRule='evenodd'
                 ></path>
               </svg>
-              <div className='ml-3 text-sm font-medium text-red-700'>{error}</div>
+
+              <div className='ml-3 text-sm font-medium text-red-700'>
+                {error}
+              </div>
+
               <button
                 type='button'
                 className='ml-auto -mx-1.5 -my-1.5 bg-red-100 dark:bg-red-200 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 dark:hover:bg-red-300 inline-flex h-8 w-8'
@@ -95,22 +101,35 @@ export default function PopUp({ trigger, setTodos, visible }) {
 
           <div className='flex flex-col pb-8'>
             <label htmlFor=''>Title</label>
+
             <Input
               onChangeHandler={handleInputChange}
               onKeyDownHandler={handleKeyDown}
               value={currentTask}
             />
+
             <label htmlFor=''>Status</label>
             <SelectButton
               width='100%'
               onChange={(newValue) => setStatus(newValue)}
               options={options}
-              defaultValue={options[0]}
+
+              defaultValue={{ value: 'incomplete', label: 'Incomplete' }}
             />
           </div>
           <div className='flex justify-between md:justify-start mt-2'>
-            <Button clickHandler={addTask} title={'Add Task'} className='md:mr-9' />
-            <Button clickHandler={handleClosePupUp} title={'Cancel'} isColorFlipped={true} />
+            <Button
+              clickHandler={addTask}
+              title={'Add Task'}
+              className='md:mr-9'
+            />
+            <Button
+              clickHandler={handleClosePupUp}
+              title={'Cancel'}
+              isColorFlipped={true}
+            />
+
+
           </div>
         </div>
       </div>
