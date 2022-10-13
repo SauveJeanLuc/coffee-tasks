@@ -1,9 +1,7 @@
 # Coffee Tasks
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
@@ -87,6 +85,9 @@ $ npm run
       <td align="center"><a href="https://github.com/IncredibleZuess"><img src="https://avatars.githubusercontent.com/u/57303461?v=4?s=100" width="100px;" alt="IncredibleZuess"/><br /><sub><b>IncredibleZuess</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=IncredibleZuess" title="Code">💻</a></td>
       <td align="center"><a href="https://sisirdhakal.vercel.app/"><img src="https://avatars.githubusercontent.com/u/62702558?v=4?s=100" width="100px;" alt="Sisir Dhakal (Saurav)"/><br /><sub><b>Sisir Dhakal (Saurav)</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sisirdhakal" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/ChahineBendjeddou"><img src="https://avatars.githubusercontent.com/u/83044371?v=4?s=100" width="100px;" alt="Chahine Bendjeddou"/><br /><sub><b>Chahine Bendjeddou</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=ChahineBendjeddou" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://www.sharesight.com/"><img src="https://avatars.githubusercontent.com/u/20451159?v=4?s=100" width="100px;" alt="Gabe"/><br /><sub><b>Gabe</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=gaber85" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
