@@ -76,9 +76,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
           <img onClick={handleClosePupUp} src={multiply} alt='Close' />
         </div>
         <div className='bg-coffeePrimaryLight rounded-md p-8 px-6 md:px-9'>
-
-          <h2 className='font-extrabold text-lg mb-2'>New Task</h2>
-
+          <h2 className='font-extrabold text-lg mb-2'>{editTodo ? 'Edit Task' : 'Add Task'}</h2>
 
           {error && (
             <div
@@ -99,9 +97,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
                 ></path>
               </svg>
 
-              <div className='ml-3 text-sm font-medium text-red-700'>
-                {error}
-              </div>
+              <div className='ml-3 text-sm font-medium text-red-700'>{error}</div>
 
               <button
                 type='button'
@@ -131,7 +127,9 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
               width='100%'
               onChange={(newValue) => setStatus(newValue)}
               options={options}
-              defaultValue={options[1]}
+              defaultValue={
+                editTodo ? { value: editTodo.status, label: editTodo.status } : options[1]
+              }
             />
           </div>
           {/* COnditionally render relavent buttons */}
@@ -142,19 +140,9 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
             </div>
           ) : (
             <div className='flex justify-between md:justify-start mt-2'>
-              <Button
-              clickHandler={addTask}
-              title={'Add Task'}
-              className='md:mr-9'
-            />
-              <Button
-              clickHandler={handleClosePupUp}
-              title={'Cancel'}
-              isColorFlipped={true}
-            />
-  
-
-          </div>
+              <Button clickHandler={addTask} title={'Add Task'} className='md:mr-9' />
+              <Button clickHandler={handleClosePupUp} title={'Cancel'} isColorFlipped={true} />
+            </div>
           )}
         </div>
       </div>

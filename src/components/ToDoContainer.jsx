@@ -74,9 +74,7 @@ export default function ToDoContainer() {
       />
     ) : (
       ''
-
     ),
-
   );
 
   const allList = todos?.map((todo, index) => (
@@ -95,15 +93,11 @@ export default function ToDoContainer() {
       <Nav setTodos={setTodos} setFilter={setFilter} />
       <div className='bg-coffeePrimaryLight py-1 text-center rounded-md md:py-2.5 md:px-2'>
         {!todos?.length ? (
-
           <span className='text-white font-semibold'>
             You have no tasks. Let&#39;s add a task to get started.
           </span>
         ) : (
-          <ul className='text-left'>
-            {filter === 'all' ? allList : filteredList}
-          </ul>
-
+          <ul className='text-left'>{filter === 'all' ? allList : filteredList}</ul>
         )}
       </div>
       {popUpvisible && (
