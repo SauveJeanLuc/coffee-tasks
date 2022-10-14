@@ -19,5 +19,8 @@ module.exports = {
       flowVersion: '0.53',
     },
   },
-  rules: {},
+  rules: {
+    // JSX transform was introduced in React 17 - This check is no longer needed and React does not need to be imported to use JSX
+    'react/react-in-jsx-scope': 'off',
+  },
 };

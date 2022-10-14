@@ -2,7 +2,6 @@ import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 function Todo({ index, todo, checkedOrNot, checkboxhandler, handleEdit, handleDelete }) {
   return (

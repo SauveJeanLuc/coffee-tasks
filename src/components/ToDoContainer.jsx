@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Nav from './Nav';
 import PopUp from './PopUp';
 import Todo from './Todo';
