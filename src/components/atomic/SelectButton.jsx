@@ -46,6 +46,7 @@ export default function SelectButton({ onChange, options, defaultValue, width })
         <Select
           onChange={onChange}
           defaultValue={defaultValue}
+          isSearchable={false}
           options={options}
           styles={customStyles}
         />

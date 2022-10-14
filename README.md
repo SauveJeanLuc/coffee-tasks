@@ -56,7 +56,7 @@ $ cd coffee-task
 
 ```console
 $ npm install
-$ npm run
+$ npm run dev
 ```
 
 🥳 YAY! Now you can see coffee-task in your localhost port.
