@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Nav from './Nav';
+import PopUp from './PopUp';
+import Todo from './Todo';
 
 export default function ToDoContainer() {
+  const [popUpvisible, setPopUpvisible] = useState(false);
+  const [editPopUp, setEditPopUp] = useState(null);
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem('todos');
     const initialValue = JSON.parse(savedTodos);
@@ -27,45 +31,84 @@ export default function ToDoContainer() {
   //   });
   //   setTodos(newTodos);
   // }
+  function checkedOrNot(todo) {
+    if (todo.status === 'complete') {
+      return true;
+    } else return false;
+  }
+  function checkboxhandler(e) {
+    const index = e.target.id;
+    var newTodos = [...todos];
+    newTodos[index].status = `${todos[index].status === 'complete' ? 'incomplete' : 'complete'}`;
+    localStorage.setItem('todos', JSON.stringify(newTodos));
+    setTodos(newTodos);
+  }
+  function handleDelete(index) {
+    var newTodos = [...todos];
+    newTodos.splice(index, 1);
+    localStorage.setItem('todos', JSON.stringify(newTodos));
+    setTodos(newTodos);
+  }
+  function handleEdit(index) {
+    setPopUpvisible(!popUpvisible);
+    setEditPopUp(todos[index]);
+    // console.log(editTodo);
+    return;
+  }
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
     if (todos?.length) return;
   }, [todos]);
   const [filter, setFilter] = useState('all');
-  const filteredList = todos?.map((todo) =>
+
+  const filteredList = todos?.map((todo, index) =>
     todo.status === filter ? (
-      <li key={todo.id} className='border-b-2 py-3 px-8 flex justify-between'>
-        <div className='font-semibold'>{todo.title}</div>
-        <div className='font-light'>{todo.status}</div>
-      </li>
+      <Todo
+        key={index}
+        index={index}
+        todo={todo}
+        checkedOrNot={checkedOrNot}
+        checkboxhandler={checkboxhandler}
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+      />
     ) : (
       ''
-
     ),
-
   );
-  const allList = todos?.map((todo) => (
-    <li key={todo.id} className='border-b-2 py-3 px-8 flex justify-between'>
-      <div className='font-semibold'>{todo.title}</div>
-      <div className='font-light'>{todo.status}</div>
-    </li>
+
+  const allList = todos?.map((todo, index) => (
+    <Todo
+      key={index}
+      index={index}
+      todo={todo}
+      checkedOrNot={checkedOrNot}
+      checkboxhandler={checkboxhandler}
+      handleEdit={handleEdit}
+      handleDelete={handleDelete}
+    />
   ));
   return (
     <>
       <Nav setTodos={setTodos} setFilter={setFilter} />
-      <div className='bg-coffeePrimaryLight px-5 py-2.5 text-center rounded-md'>
+      <div className='bg-coffeePrimaryLight py-1 text-center rounded-md md:py-2.5 md:px-2'>
         {!todos?.length ? (
-
           <span className='text-white font-semibold'>
             You have no tasks. Let&#39;s add a task to get started.
           </span>
         ) : (
-          <ul className='text-left'>
-            {filter === 'all' ? allList : filteredList}
-          </ul>
-
+          <ul className='text-left'>{filter === 'all' ? allList : filteredList}</ul>
         )}
       </div>
+      {popUpvisible && (
+        <PopUp
+          visible={popUpvisible}
+          trigger={setPopUpvisible}
+          setTodos={setTodos}
+          todos={todos}
+          editTodo={editPopUp}
+        />
+      )}
     </>
   );
 }

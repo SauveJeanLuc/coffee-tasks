@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SelectButton from './atomic/SelectButton';
 import Input from './atomic/Input';
 import Button from './atomic/Button';
@@ -10,14 +10,15 @@ const options = [
   { value: 'complete', label: 'Complete' },
   { value: 'incomplete', label: 'Incomplete' },
 ];
-export default function PopUp({ trigger, setTodos, visible }) {
+export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      return addTask(e);
+      if (editTodo) return editTask(e);
+      else return addTask(e);
     }
   };
-  const [status, setStatus] = useState('incomplete');
-  const [currentTask, setCurrentTask] = useState('');
+  const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
+  const [currentTask, setCurrentTask] = useState(editTodo ? editTodo.title : '');
   const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
@@ -32,6 +33,22 @@ export default function PopUp({ trigger, setTodos, visible }) {
     setCurrentTask('');
     setError(null);
     trigger(false);
+  };
+  const editTask = (e) => {
+    e.preventDefault();
+    if (currentTask === '') setError('Please enter the title!');
+    else {
+      const newTodo = {
+        title: currentTask,
+        status: status.value ? status.value : status,
+        id: uuid(),
+      };
+      var newTodos = [...todos];
+      const editTodoIndex = todos.findIndex((obj) => obj.id === editTodo.id);
+      newTodos[editTodoIndex] = newTodo;
+      setTodos(newTodos);
+      defaultState();
+    }
   };
   const addTask = (e) => {
     e.preventDefault();
@@ -59,9 +76,7 @@ export default function PopUp({ trigger, setTodos, visible }) {
           <img onClick={handleClosePupUp} src={multiply} alt='Close' />
         </div>
         <div className='bg-coffeePrimaryLight rounded-md p-8 px-6 md:px-9'>
-
-          <h2 className='font-extrabold text-lg mb-2'>New Task</h2>
-
+          <h2 className='font-extrabold text-lg mb-2'>{editTodo ? 'Edit Task' : 'Add Task'}</h2>
 
           {error && (
             <div
@@ -82,9 +97,7 @@ export default function PopUp({ trigger, setTodos, visible }) {
                 ></path>
               </svg>
 
-              <div className='ml-3 text-sm font-medium text-red-700'>
-                {error}
-              </div>
+              <div className='ml-3 text-sm font-medium text-red-700'>{error}</div>
 
               <button
                 type='button'
@@ -103,6 +116,7 @@ export default function PopUp({ trigger, setTodos, visible }) {
             <label htmlFor=''>Title</label>
 
             <Input
+              class='text-3xl'
               onChangeHandler={handleInputChange}
               onKeyDownHandler={handleKeyDown}
               value={currentTask}
@@ -113,24 +127,23 @@ export default function PopUp({ trigger, setTodos, visible }) {
               width='100%'
               onChange={(newValue) => setStatus(newValue)}
               options={options}
-
-              defaultValue={{ value: 'incomplete', label: 'Incomplete' }}
+              defaultValue={
+                editTodo ? { value: editTodo.status, label: editTodo.status } : options[1]
+              }
             />
           </div>
-          <div className='flex justify-between md:justify-start mt-2'>
-            <Button
-              clickHandler={addTask}
-              title={'Add Task'}
-              className='md:mr-9'
-            />
-            <Button
-              clickHandler={handleClosePupUp}
-              title={'Cancel'}
-              isColorFlipped={true}
-            />
-
-
-          </div>
+          {/* COnditionally render relavent buttons */}
+          {editTodo ? (
+            <div className='flex justify-between md:justify-start mt-2'>
+              <Button clickHandler={editTask} title={'Edit Task'} className='md:mr-9' />
+              <Button clickHandler={handleClosePupUp} title={'Cancel'} isColorFlipped={true} />
+            </div>
+          ) : (
+            <div className='flex justify-between md:justify-start mt-2'>
+              <Button clickHandler={addTask} title={'Add Task'} className='md:mr-9' />
+              <Button clickHandler={handleClosePupUp} title={'Cancel'} isColorFlipped={true} />
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -141,4 +154,6 @@ PopUp.propTypes = {
   trigger: PropTypes.func,
   visible: PropTypes.bool,
   setTodos: PropTypes.func,
+  editTodo: PropTypes.object,
+  todos: PropTypes.array,
 };
