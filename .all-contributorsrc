@@ -114,7 +114,7 @@
         "code"
       ]
     },
-    {      
+    {
       "login": "sahilyeole",
       "name": "Sahil Yeole",
       "avatar_url": "https://avatars.githubusercontent.com/u/73148455?v=4",
@@ -202,6 +202,15 @@
       "profile": "http://brunocastro.dev",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "hertafui",
+      "name": "yq;",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32908863?v=4",
+      "profile": "https://github.com/hertafui",
+      "contributions": [
+        "design"
       ]
     }
   ],
