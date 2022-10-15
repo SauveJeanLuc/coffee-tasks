@@ -17,6 +17,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
       else return addTask(e);
     }
   };
+
   const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
   const [currentTask, setCurrentTask] = useState(editTodo ? editTodo.title : '');
   const [error, setError] = useState(null);
@@ -28,12 +29,15 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
   const handleClosePupUp = () => {
     setError(null);
     trigger(false);
+    setCurrentTask('');
   };
+
   const defaultState = () => {
     setCurrentTask('');
     setError(null);
     trigger(false);
   };
+
   const editTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');
@@ -50,6 +54,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
       defaultState();
     }
   };
+
   const addTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');

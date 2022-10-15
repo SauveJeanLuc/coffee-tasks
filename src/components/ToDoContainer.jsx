@@ -11,31 +11,13 @@ export default function ToDoContainer() {
     const initialValue = JSON.parse(savedTodos);
     return initialValue || [];
   });
-  // function addTodo(todo) {
-  //   setTodos((state) => [...state, todo]);
-  // }
-  // function deleteTodo(id) {
-  //   setTodos((state) => state.filter((t) => t.id !== id));
-  // }
-  // function editTodo(id, task) {
-  //   const newTodos = todos.map((t) => {
-  //     if (t.id === id) t.task = task;
-  //     return t;
-  //   });
-  //   setTodos(newTodos);
-  // }
-  // function toggleCompletion(id) {
-  //   const newTodos = todos.map((t) => {
-  //     if (t.id === id) t.completed = !t.completed;
-  //     return t;
-  //   });
-  //   setTodos(newTodos);
-  // }
+
   function checkedOrNot(todo) {
     if (todo.status === 'complete') {
       return true;
     } else return false;
   }
+
   function checkboxhandler(e) {
     const index = e.target.id;
     var newTodos = [...todos];
@@ -43,22 +25,30 @@ export default function ToDoContainer() {
     localStorage.setItem('todos', JSON.stringify(newTodos));
     setTodos(newTodos);
   }
+
   function handleDelete(index) {
     var newTodos = [...todos];
     newTodos.splice(index, 1);
     localStorage.setItem('todos', JSON.stringify(newTodos));
     setTodos(newTodos);
   }
+
   function handleEdit(index) {
     setPopUpvisible(!popUpvisible);
     setEditPopUp(todos[index]);
-    // console.log(editTodo);
     return;
   }
+
+  function closePopUp() {
+    setPopUpvisible(false);
+    setEditPopUp(null);
+  }
+
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
     if (todos?.length) return;
   }, [todos]);
+
   const [filter, setFilter] = useState('all');
 
   const filteredList = todos?.map((todo, index) =>
@@ -88,6 +78,7 @@ export default function ToDoContainer() {
       handleDelete={handleDelete}
     />
   ));
+
   return (
     <>
       <Nav setTodos={setTodos} setFilter={setFilter} />
@@ -103,7 +94,7 @@ export default function ToDoContainer() {
       {popUpvisible && (
         <PopUp
           visible={popUpvisible}
-          trigger={setPopUpvisible}
+          trigger={closePopUp}
           setTodos={setTodos}
           todos={todos}
           editTodo={editPopUp}
