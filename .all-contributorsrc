@@ -176,6 +176,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "BrunoLagoa",
+      "name": "Bruno Castro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3878945?v=4",
+      "profile": "http://brunocastro.dev",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -1,4 +1,3 @@
-import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 
@@ -46,6 +45,7 @@ export default function SelectButton({ onChange, options, defaultValue, width })
         <Select
           onChange={onChange}
           defaultValue={defaultValue}
+          isSearchable={false}
           options={options}
           styles={customStyles}
         />

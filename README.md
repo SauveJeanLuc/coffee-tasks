@@ -56,7 +56,7 @@ $ cd coffee-task
 
 ```console
 $ npm install
-$ npm run
+$ npm run dev
 ```
 
 🥳 YAY! Now you can see coffee-task in your localhost port.
@@ -92,6 +92,7 @@ $ npm run
       <td align="center"><a href="https://github.com/suryansh-bhatnagar"><img src="https://avatars.githubusercontent.com/u/90460257?v=4?s=100" width="100px;" alt="suryansh-bhatnagar"/><br /><sub><b>suryansh-bhatnagar</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=suryansh-bhatnagar" title="Code">💻</a></td>
       <td align="center"><a href="https://www.sharesight.com/"><img src="https://avatars.githubusercontent.com/u/20451159?v=4?s=100" width="100px;" alt="Gabe"/><br /><sub><b>Gabe</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=gaber85" title="Code">💻</a></td>
       <td align="center"><a href="https://tbello.tech"><img src="https://avatars.githubusercontent.com/u/24270269?v=4?s=100" width="100px;" alt="Bello Oluwatomisin"/><br /><sub><b>Bello Oluwatomisin</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=t-bello7" title="Code">💻</a></td>
+      <td align="center"><a href="http://brunocastro.dev"><img src="https://avatars.githubusercontent.com/u/3878945?v=4?s=100" width="100px;" alt="Bruno Castro"/><br /><sub><b>Bruno Castro</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=BrunoLagoa" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
