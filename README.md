@@ -98,11 +98,8 @@ $ npm run dev
     <tr>
       <td align="center"><a href="http://brunocastro.dev"><img src="https://avatars.githubusercontent.com/u/3878945?v=4?s=100" width="100px;" alt="Bruno Castro"/><br /><sub><b>Bruno Castro</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=BrunoLagoa" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/hertafui"><img src="https://avatars.githubusercontent.com/u/32908863?v=4?s=100" width="100px;" alt="yq;"/><br /><sub><b>yq;</b></sub></a><br /><a href="#design-hertafui" title="Design">🎨</a></td>
-    </tr>
-    <tr>
       <td align="center"><a href="http://rohankaran.github.io"><img src="https://avatars.githubusercontent.com/u/38720754?v=4?s=100" width="100px;" alt="Rohan Karan"/><br /><sub><b>Rohan Karan</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RohanKaran" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Onyelaudochukwuka"><img src="https://avatars.githubusercontent.com/u/82924100?v=4?s=100" width="100px;" alt="Onyela Udochukwuka"/><br /><sub><b>Onyela Udochukwuka</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Onyelaudochukwuka" title="Code">💻</a></td>    
-      <td align="center"><a href="http://rohankaran.github.io"><img src="https://avatars.githubusercontent.com/u/38720754?v=4?s=100" width="100px;" alt="Rohan Karan"/><br /><sub><b>Rohan Karan</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RohanKaran" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
