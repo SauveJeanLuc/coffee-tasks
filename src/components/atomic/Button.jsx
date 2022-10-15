@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 
 export default function Button({ className, title, isColorFlipped, clickHandler = () => {} }) {
   return (
