@@ -85,7 +85,6 @@ $ npm run dev
       <td align="center"><a href="https://github.com/IncredibleZuess"><img src="https://avatars.githubusercontent.com/u/57303461?v=4?s=100" width="100px;" alt="IncredibleZuess"/><br /><sub><b>IncredibleZuess</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=IncredibleZuess" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/sahilyeole"><img src="https://avatars.githubusercontent.com/u/73148455?v=4?s=100" width="100px;" alt="Sahil Yeole"/><br /><sub><b>Sahil Yeole</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sahilyeole" title="Code">💻</a></td>
       <td align="center"><a href="http://rohankaran.github.io"><img src="https://avatars.githubusercontent.com/u/38720754?v=4?s=100" width="100px;" alt="Rohan Karan"/><br /><sub><b>Rohan Karan</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RohanKaran" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/Onyelaudochukwuka"><img src="https://avatars.githubusercontent.com/u/82924100?v=4?s=100" width="100px;" alt="Onyela Udochukwuka"/><br /><sub><b>Onyela Udochukwuka</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Onyelaudochukwuka" title="Code">💻</a></td>
     </tr>
     <tr>
       <td align="center"><a href="https://sisirdhakal.vercel.app/"><img src="https://avatars.githubusercontent.com/u/62702558?v=4?s=100" width="100px;" alt="Sisir Dhakal (Saurav)"/><br /><sub><b>Sisir Dhakal (Saurav)</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sisirdhakal" title="Code">💻</a></td>
@@ -95,6 +94,9 @@ $ npm run dev
       <td align="center"><a href="https://github.com/aritroCoder"><img src="https://avatars.githubusercontent.com/u/92646038?v=4?s=100" width="100px;" alt="Aritra Bhaduri"/><br /><sub><b>Aritra Bhaduri</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=aritroCoder" title="Code">💻</a></td>
       <td align="center"><a href="https://tbello.tech"><img src="https://avatars.githubusercontent.com/u/24270269?v=4?s=100" width="100px;" alt="Bello Oluwatomisin"/><br /><sub><b>Bello Oluwatomisin</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=t-bello7" title="Code">💻</a></td>
       <td align="center"><a href="http://brunocastro.dev"><img src="https://avatars.githubusercontent.com/u/3878945?v=4?s=100" width="100px;" alt="Bruno Castro"/><br /><sub><b>Bruno Castro</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=BrunoLagoa" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/Onyelaudochukwuka"><img src="https://avatars.githubusercontent.com/u/82924100?v=4?s=100" width="100px;" alt="Onyela Udochukwuka"/><br /><sub><b>Onyela Udochukwuka</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Onyelaudochukwuka" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
