@@ -19,10 +19,16 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
   };
   const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
   const [currentTask, setCurrentTask] = useState(editTodo ? editTodo.title : '');
+  const [description, setDescription] = useState(editTodo ? editTodo.description : '');
   const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
     setCurrentTask(e.target.value);
+  };
+
+  const handleDescriptionChange = (e) => {
+    console.log(e);
+    setDescription(e.target.value);
   };
 
   const handleClosePupUp = () => {
@@ -31,6 +37,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
   };
   const defaultState = () => {
     setCurrentTask('');
+    setDescription('');
     setError(null);
     trigger(false);
   };
@@ -40,6 +47,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
     else {
       const newTodo = {
         title: currentTask,
+        description,
         status: status.value ? status.value : status,
         id: uuid(),
       };
@@ -56,6 +64,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
     else {
       const newTodo = {
         title: currentTask,
+        description,
         status: status.value ? status.value : status,
         id: uuid(),
       };
@@ -121,6 +130,14 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
               onKeyDownHandler={handleKeyDown}
               value={currentTask}
             />
+            <label>Description</label>
+            <textarea
+              placeholder='Add text description'
+              className='p-2 border-2 border-coffeeDark rounded-md w-full my-3'
+              onChange={handleDescriptionChange}
+            >
+              {description}
+            </textarea>
 
             <label htmlFor=''>Status</label>
             <SelectButton
