@@ -27,7 +27,6 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
   };
 
   const handleDescriptionChange = (e) => {
-    console.log(e);
     setDescription(e.target.value);
   };
 
