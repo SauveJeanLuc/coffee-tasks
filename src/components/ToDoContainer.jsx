@@ -121,6 +121,7 @@ export default function ToDoContainer() {
           editTodo={editPopUp}
         />
       )}
+
       <DeletionDialog
         show={show}
         closeDialog={closeDialog}
