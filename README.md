@@ -16,18 +16,16 @@
 
 > With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
 
-The goal for the project is that one day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this.
-And you'll be part of the Impact 🙂.
+This project is basically a todo app, where users will be able to list down the tasks they wish to do. The goal for the project is that one day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this and you'll be part of the Impact 🙂.
 
-Originally designed to help Beginner Front-End Devs build a solid
+Originally designed to help Beginner Front-End developers to build a solid
 and real-world working app through the course of - [Hacktoberfest'22](https://hacktoberfest.com/).
 
 **All PRs To Be Merged From 1st October 2022**
 
-## UI/UX Design
+## Proposed UX Design
 
-We have made designs upon which our project is based:
-
+Design link:
 [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
 
 ## Create issue
@@ -36,16 +34,20 @@ If you want to create a new issue make sure to read [report_bug.md](.github/ISSU
 
 ## Contributing
 
-Contributions are always welcome!
+Contributions are always welcomed!
 
 See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
 
+## Technologies Used
+
+- JavaScript
+
 ## Installing and Running
 
 - Fork the repo.
-- Clone the repo by running the command below in your terminal:
+- Clone repo & switch to the folder by running the command below in your terminal:
 
 ```console
 $ git clone https://github.com/your_username/coffee-tasks.git
@@ -54,10 +56,15 @@ $ cd coffee-task
 
 > Now you are in your cloned repo of coffee-task.
 
-- run the command below to install all the packages and to run coffee-task on localhost:
+- Install all packages .
 
 ```console
 $ npm install
+```
+
+- Run app on localhost.
+
+```console
 $ npm run dev
 ```
 
@@ -89,18 +96,19 @@ $ npm run dev
       <td align="center"><a href="https://github.com/sahilyeole"><img src="https://avatars.githubusercontent.com/u/73148455?v=4?s=100" width="100px;" alt="Sahil Yeole"/><br /><sub><b>Sahil Yeole</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sahilyeole" title="Code">💻</a></td>
     </tr>
     <tr>
+      <td align="center"><a href="http://rohankaran.github.io"><img src="https://avatars.githubusercontent.com/u/38720754?v=4?s=100" width="100px;" alt="Rohan Karan"/><br /><sub><b>Rohan Karan</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RohanKaran" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Onyelaudochukwuka"><img src="https://avatars.githubusercontent.com/u/82924100?v=4?s=100" width="100px;" alt="Onyela Udochukwuka"/><br /><sub><b>Onyela Udochukwuka</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Onyelaudochukwuka" title="Code">💻</a></td>
       <td align="center"><a href="https://sisirdhakal.vercel.app/"><img src="https://avatars.githubusercontent.com/u/62702558?v=4?s=100" width="100px;" alt="Sisir Dhakal (Saurav)"/><br /><sub><b>Sisir Dhakal (Saurav)</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=sisirdhakal" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/ChahineBendjeddou"><img src="https://avatars.githubusercontent.com/u/83044371?v=4?s=100" width="100px;" alt="Chahine Bendjeddou"/><br /><sub><b>Chahine Bendjeddou</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=ChahineBendjeddou" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/suryansh-bhatnagar"><img src="https://avatars.githubusercontent.com/u/90460257?v=4?s=100" width="100px;" alt="suryansh-bhatnagar"/><br /><sub><b>suryansh-bhatnagar</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=suryansh-bhatnagar" title="Code">💻</a></td>
       <td align="center"><a href="https://www.sharesight.com/"><img src="https://avatars.githubusercontent.com/u/20451159?v=4?s=100" width="100px;" alt="Gabe"/><br /><sub><b>Gabe</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=gaber85" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/aritroCoder"><img src="https://avatars.githubusercontent.com/u/92646038?v=4?s=100" width="100px;" alt="Aritra Bhaduri"/><br /><sub><b>Aritra Bhaduri</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=aritroCoder" title="Code">💻</a></td>
-      <td align="center"><a href="https://tbello.tech"><img src="https://avatars.githubusercontent.com/u/24270269?v=4?s=100" width="100px;" alt="Bello Oluwatomisin"/><br /><sub><b>Bello Oluwatomisin</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=t-bello7" title="Code">💻</a></td>
     </tr>
     <tr>
+      <td align="center"><a href="https://tbello.tech"><img src="https://avatars.githubusercontent.com/u/24270269?v=4?s=100" width="100px;" alt="Bello Oluwatomisin"/><br /><sub><b>Bello Oluwatomisin</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=t-bello7" title="Code">💻</a></td>
       <td align="center"><a href="http://brunocastro.dev"><img src="https://avatars.githubusercontent.com/u/3878945?v=4?s=100" width="100px;" alt="Bruno Castro"/><br /><sub><b>Bruno Castro</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=BrunoLagoa" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/hertafui"><img src="https://avatars.githubusercontent.com/u/32908863?v=4?s=100" width="100px;" alt="yq;"/><br /><sub><b>yq;</b></sub></a><br /><a href="#design-hertafui" title="Design">🎨</a></td>
-      <td align="center"><a href="http://rohankaran.github.io"><img src="https://avatars.githubusercontent.com/u/38720754?v=4?s=100" width="100px;" alt="Rohan Karan"/><br /><sub><b>Rohan Karan</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=RohanKaran" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/Rutuja9696"><img src="https://avatars.githubusercontent.com/u/73870995?v=4?s=100" width="100px;" alt="Rutuja9696"/><br /><sub><b>Rutuja9696</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Rutuja9696" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
