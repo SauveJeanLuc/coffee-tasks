@@ -123,7 +123,7 @@
         "code"
       ]
     },
-    {      
+    {
       "login": "sahilyeole",
       "name": "Sahil Yeole",
       "avatar_url": "https://avatars.githubusercontent.com/u/73148455?v=4",
@@ -220,6 +220,15 @@
       "profile": "https://github.com/hertafui",
       "contributions": [
         "design"
+      ]
+    },
+    {
+      "login": "uKiJo",
+      "name": "uKiJo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27972641?v=4",
+      "profile": "https://github.com/uKiJo",
+      "contributions": [
+        "code"
       ]
     }
   ],
