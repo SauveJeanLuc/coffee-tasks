@@ -27,7 +27,7 @@ export default function DeletionDialog({ show, closeDialog, handleDelete, index 
             <Button
               clickHandler={() => handleDelete(index)}
               title={'Yes, i am sure'}
-              className='md:mr-9'
+              className='mr-9'
             />
             <Button clickHandler={closeDialog} title={'Cancel'} isColorFlipped={true} />
           </div>
