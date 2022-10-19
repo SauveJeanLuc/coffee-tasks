@@ -1,26 +1,30 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { v4 as uuid } from 'uuid';
+import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SelectButton from './atomic/SelectButton';
 import Input from './atomic/Input';
 import Button from './atomic/Button';
 import multiply from '../assets/multiply.svg';
-import { v4 as uuid } from 'uuid';
 
 const options = [
   { value: 'complete', label: 'Complete' },
   { value: 'incomplete', label: 'Incomplete' },
 ];
 export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
+  const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
+  const [currentTask, setCurrentTask] = useState(editTodo ? editTodo.title : '');
+  const [description, setDescription] = useState(editTodo ? editTodo.description : '');
+  const [showFields, setShowFields] = useState(false);
+  const [error, setError] = useState(null);
+
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       if (editTodo) return editTask(e);
       else return addTask(e);
     }
   };
-  const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
-  const [currentTask, setCurrentTask] = useState(editTodo ? editTodo.title : '');
-  const [description, setDescription] = useState(editTodo ? editTodo.description : '');
-  const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
     setCurrentTask(e.target.value);
@@ -34,12 +38,14 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
     setError(null);
     trigger(false);
   };
+
   const defaultState = () => {
     setCurrentTask('');
     setDescription('');
     setError(null);
     trigger(false);
   };
+
   const editTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');
@@ -57,6 +63,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
       defaultState();
     }
   };
+
   const addTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');
@@ -129,14 +136,29 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
               onKeyDownHandler={handleKeyDown}
               value={currentTask}
             />
-            <label>Description</label>
-            <textarea
-              placeholder='Add text description'
-              className='p-2 border-2 border-coffeeDark rounded-md w-full my-3'
-              onChange={handleDescriptionChange}
-            >
-              {description}
-            </textarea>
+
+            {/* Any additional field can be hidden initially by nesting it here */}
+            {showFields && (
+              <>
+                <label>Description</label>
+                <textarea
+                  placeholder='Add text description'
+                  className='p-2 border-2 border-coffeeDark rounded-md w-full my-3'
+                  onChange={handleDescriptionChange}
+                >
+                  {description}
+                </textarea>
+              </>
+            )}
+
+            <FontAwesomeIcon
+              cursor='pointer'
+              title={`${showFields ? 'collapse' : 'expand'} fields`}
+              className='self-end w-fit relative -top-2.5 text-coffeeDark'
+              alignmentBaseline='after-edge'
+              onClick={() => setShowFields(!showFields)}
+              icon={showFields ? faCaretUp : faCaretDown}
+            />
 
             <label htmlFor=''>Status</label>
             <SelectButton
