@@ -67,6 +67,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
   const addTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');
+    else if(currentTask.trim().length == 0) setError('Please enter a non empty title!');
     else {
       const newTodo = {
         title: currentTask,
