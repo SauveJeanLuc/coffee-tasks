@@ -24,11 +24,7 @@ export default function DeletionDialog({ show, closeDialog, handleDelete, index 
           </div>
 
           <div className='flex justify-center md:justify-center mt-2'>
-            <Button
-              clickHandler={() => handleDelete(index)}
-              title={'Yes, i am sure'}
-              className='mr-9'
-            />
+            <Button clickHandler={() => handleDelete(index)} title={'Delete'} className='mr-9' />
             <Button clickHandler={closeDialog} title={'Cancel'} isColorFlipped={true} />
           </div>
         </div>
