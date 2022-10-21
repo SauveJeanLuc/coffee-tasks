@@ -230,6 +230,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "divya-nshi",
+      "name": "Divyanshi Chouksey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96721993?v=4",
+      "profile": "https://github.com/divya-nshi",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
