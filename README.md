@@ -1,7 +1,9 @@
 # Coffee Tasks
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
@@ -23,7 +25,7 @@ and real-world working app through the course of - [Hacktoberfest'22](https://ha
 
 ## Proposed UX Design
 
- Design link:
+Design link:
 [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
 
 ## Create issue
@@ -37,8 +39,11 @@ Contributions are always welcomed!
 See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
+
 ## Technologies Used
+
 - JavaScript
+
 ## Installing and Running
 
 - Fork the repo.
@@ -56,7 +61,9 @@ $ cd coffee-task
 ```console
 $ npm install
 ```
+
 - Run app on localhost.
+
 ```console
 $ npm run dev
 ```
