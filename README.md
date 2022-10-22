@@ -2,7 +2,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -109,6 +109,7 @@ $ npm run dev
       <td align="center"><a href="http://brunocastro.dev"><img src="https://avatars.githubusercontent.com/u/3878945?v=4?s=100" width="100px;" alt="Bruno Castro"/><br /><sub><b>Bruno Castro</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=BrunoLagoa" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/hertafui"><img src="https://avatars.githubusercontent.com/u/32908863?v=4?s=100" width="100px;" alt="yq;"/><br /><sub><b>yq;</b></sub></a><br /><a href="#design-hertafui" title="Design">🎨</a></td>
       <td align="center"><a href="https://github.com/Rutuja9696"><img src="https://avatars.githubusercontent.com/u/73870995?v=4?s=100" width="100px;" alt="Rutuja9696"/><br /><sub><b>Rutuja9696</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Rutuja9696" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/divya-nshi"><img src="https://avatars.githubusercontent.com/u/96721993?v=4?s=100" width="100px;" alt="Divyanshi Chouksey"/><br /><sub><b>Divyanshi Chouksey</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=divya-nshi" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
