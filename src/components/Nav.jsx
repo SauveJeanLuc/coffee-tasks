@@ -17,7 +17,7 @@ export default function Nav({ setTodos, setFilter }) {
   };
 
   return (
-    <div className='flex justify-between px-5 py-2.5 border-b-2 border-coffeeDark'>
+    <div className='flex justify-between py-2.5 border-b-2 border-coffeeDark'>
       <PopUp visible={popUpvisible} trigger={setPopUpvisible} setTodos={setTodos} />
 
       <div className='w-[100%] flex justify-between align-middle'>

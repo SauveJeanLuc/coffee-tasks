@@ -1,7 +1,9 @@
 # Coffee Tasks
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-25-orange.svg?style=flat-square)](#contributors-)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
@@ -14,18 +16,16 @@
 
 > With an Integration of GPT-3 APIs, Suggestion to your next task comes right away.
 
-The goal for the project is that one day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this.
-And you'll be part of the Impact 🙂.
+This project is basically a todo app, where users will be able to list down the tasks they wish to do. The goal for the project is that one day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this and you'll be part of the Impact 🙂.
 
-Originally designed to help Beginner Front-End Devs build a solid
+Originally designed to help Beginner Front-End developers to build a solid
 and real-world working app through the course of - [Hacktoberfest'22](https://hacktoberfest.com/).
 
 **All PRs To Be Merged From 1st October 2022**
 
-## UI/UX Design
+## Proposed UX Design
 
-We have made designs upon which our project is based:
-
+Design link:
 [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
 
 ## Create issue
@@ -34,16 +34,20 @@ If you want to create a new issue make sure to read [report_bug.md](.github/ISSU
 
 ## Contributing
 
-Contributions are always welcome!
+Contributions are always welcomed!
 
 See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
 
+## Technologies Used
+
+- JavaScript
+
 ## Installing and Running
 
 - Fork the repo.
-- Clone the repo by running the command below in your terminal:
+- Clone repo & switch to the folder by running the command below in your terminal:
 
 ```console
 $ git clone https://github.com/your_username/coffee-tasks.git
@@ -52,10 +56,15 @@ $ cd coffee-task
 
 > Now you are in your cloned repo of coffee-task.
 
-- run the command below to install all the packages and to run coffee-task on localhost:
+- Install all packages .
 
 ```console
 $ npm install
+```
+
+- Run app on localhost.
+
+```console
 $ npm run dev
 ```
 
@@ -100,6 +109,8 @@ $ npm run dev
       <td align="center"><a href="http://brunocastro.dev"><img src="https://avatars.githubusercontent.com/u/3878945?v=4?s=100" width="100px;" alt="Bruno Castro"/><br /><sub><b>Bruno Castro</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=BrunoLagoa" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/hertafui"><img src="https://avatars.githubusercontent.com/u/32908863?v=4?s=100" width="100px;" alt="yq;"/><br /><sub><b>yq;</b></sub></a><br /><a href="#design-hertafui" title="Design">🎨</a></td>
       <td align="center"><a href="https://github.com/uKiJo"><img src="https://avatars.githubusercontent.com/u/27972641?v=4?s=100" width="100px;" alt="uKiJo"/><br /><sub><b>uKiJo</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=uKiJo" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/Rutuja9696"><img src="https://avatars.githubusercontent.com/u/73870995?v=4?s=100" width="100px;" alt="Rutuja9696"/><br /><sub><b>Rutuja9696</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=Rutuja9696" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/divya-nshi"><img src="https://avatars.githubusercontent.com/u/96721993?v=4?s=100" width="100px;" alt="Divyanshi Chouksey"/><br /><sub><b>Divyanshi Chouksey</b></sub></a><br /><a href="https://github.com/SauveJeanLuc/coffee-tasks/commits?author=divya-nshi" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
