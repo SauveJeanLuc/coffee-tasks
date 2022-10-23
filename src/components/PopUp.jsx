@@ -1,58 +1,45 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { v4 as uuid } from 'uuid';
-import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SelectButton from './atomic/SelectButton';
 import Input from './atomic/Input';
 import Button from './atomic/Button';
 import multiply from '../assets/multiply.svg';
+import { v4 as uuid } from 'uuid';
 
 const options = [
   { value: 'complete', label: 'Complete' },
   { value: 'incomplete', label: 'Incomplete' },
 ];
 export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
-  const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
-  const [currentTask, setCurrentTask] = useState(editTodo ? editTodo.title : '');
-  const [description, setDescription] = useState(editTodo ? editTodo.description : '');
-  const [showFields, setShowFields] = useState(false);
-  const [error, setError] = useState(null);
-
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       if (editTodo) return editTask(e);
       else return addTask(e);
     }
   };
+  const [status, setStatus] = useState(editTodo ? editTodo.status : 'incomplete');
+  const [currentTask, setCurrentTask] = useState(editTodo ? editTodo.title : '');
+  const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
     setCurrentTask(e.target.value);
-  };
-
-  const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
   };
 
   const handleClosePupUp = () => {
     setError(null);
     trigger(false);
   };
-
   const defaultState = () => {
     setCurrentTask('');
-    setDescription('');
     setError(null);
     trigger(false);
   };
-
   const editTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');
     else {
       const newTodo = {
         title: currentTask,
-        description,
         status: status.value ? status.value : status,
         id: uuid(),
       };
@@ -63,15 +50,13 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
       defaultState();
     }
   };
-
   const addTask = (e) => {
     e.preventDefault();
     if (currentTask === '') setError('Please enter the title!');
-    else if(currentTask.trim().length == 0) setError('Please enter a non empty title!');
+    else if (currentTask.trim().length == 0) setError('Please enter a non empty title!');
     else {
       const newTodo = {
         title: currentTask,
-        description,
         status: status.value ? status.value : status,
         id: uuid(),
       };
@@ -84,8 +69,7 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
     <div
       style={{ zIndex: 9 }}
       className={`${
-        visible ? `scale-100` : `scale-0`
-      } flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center z-[9999]`}
+        visible ? `scale-100` : `scale-0`} flex absolute inset-0 w-full h-full bg-black/50 flex-col justify-center items-center z-[9999]`}
     >
       <div className={'w-4/5 max-w-sm'}>
         <div className='w-[10%] bg-coffeePrimaryLight mb-2 flex justify-center ml-auto cursor-pointer'>
@@ -136,29 +120,6 @@ export default function PopUp({ trigger, todos, setTodos, visible, editTodo }) {
               onChangeHandler={handleInputChange}
               onKeyDownHandler={handleKeyDown}
               value={currentTask}
-            />
-
-            {/* Any additional field can be hidden initially by nesting it here */}
-            {showFields && (
-              <>
-                <label>Description</label>
-                <textarea
-                  placeholder='Add text description'
-                  className='p-2 border-2 border-coffeeDark rounded-md w-full my-3'
-                  onChange={handleDescriptionChange}
-                >
-                  {description}
-                </textarea>
-              </>
-            )}
-
-            <FontAwesomeIcon
-              cursor='pointer'
-              title={`${showFields ? 'collapse' : 'expand'} fields`}
-              className='self-end w-fit relative -top-2.5 text-coffeeDark'
-              alignmentBaseline='after-edge'
-              onClick={() => setShowFields(!showFields)}
-              icon={showFields ? faCaretUp : faCaretDown}
             />
 
             <label htmlFor=''>Status</label>
