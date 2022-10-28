@@ -40,7 +40,7 @@ export default function SelectButton({ onChange, options, defaultValue, width })
   };
 
   return (
-    <>
+    <div>
       <div className={`text-white text-xs font-semibold font-poppins tracking-widest sm:text-base`}>
         <Select
           onChange={onChange}
@@ -50,7 +50,7 @@ export default function SelectButton({ onChange, options, defaultValue, width })
           styles={customStyles}
         />
       </div>
-    </>
+    </div>
   );
 }
 

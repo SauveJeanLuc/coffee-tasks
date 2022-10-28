@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
 import Nav from './Nav';
 import PopUp from './PopUp';
-import DeletionDialog from './DeletionDialog';
 import Todo from './Todo';
+import '../dark.css';
 
 export default function ToDoContainer() {
   const [popUpvisible, setPopUpvisible] = useState(false);
-  const [todoIndex, setTodoIndex] = useState(false);
-  const [show, setShow] = useState(false);
   const [editPopUp, setEditPopUp] = useState(null);
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem('todos');
@@ -51,21 +49,12 @@ export default function ToDoContainer() {
     newTodos.splice(index, 1);
     localStorage.setItem('todos', JSON.stringify(newTodos));
     setTodos(newTodos);
-    closeDialog();
   }
   function handleEdit(index) {
     setPopUpvisible(!popUpvisible);
     setEditPopUp(todos[index]);
     // console.log(editTodo);
     return;
-  }
-  function openDialog(index) {
-    setTodoIndex(index);
-    setShow(!show);
-    console.log(index);
-  }
-  function closeDialog() {
-    setShow(!show);
   }
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
@@ -82,7 +71,7 @@ export default function ToDoContainer() {
         checkedOrNot={checkedOrNot}
         checkboxhandler={checkboxhandler}
         handleEdit={handleEdit}
-        handleDelete={openDialog}
+        handleDelete={handleDelete}
       />
     ) : (
       ''
@@ -97,15 +86,15 @@ export default function ToDoContainer() {
       checkedOrNot={checkedOrNot}
       checkboxhandler={checkboxhandler}
       handleEdit={handleEdit}
-      handleDelete={openDialog}
+      handleDelete={handleDelete}
     />
   ));
   return (
     <>
       <Nav setTodos={setTodos} setFilter={setFilter} />
-      <div className='bg-coffeePrimaryLight py-1 text-center rounded-md md:py-2.5 md:px-2'>
+      <div className='bg-coffeePrimaryLight dark:bg-orange-900 py-1 text-center rounded-md md:py-2.5 md:px-2'>
         {!todos?.length ? (
-          <span className='text-white font-semibold'>
+          <span className='text-stone-800 dark:text-stone-200 font-semibold'>
             You have no tasks. Let&#39;s add a task to get started.
           </span>
         ) : (
@@ -121,13 +110,6 @@ export default function ToDoContainer() {
           editTodo={editPopUp}
         />
       )}
-
-      <DeletionDialog
-        show={show}
-        closeDialog={closeDialog}
-        handleDelete={handleDelete}
-        index={todoIndex}
-      />
     </>
   );
 }
