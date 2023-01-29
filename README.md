@@ -6,8 +6,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-### A [Hacktoberfest](https://hacktoberfest.com/) Present 🎁 for all React Beginners.
-
 ![COFFEE-TASKS](https://user-images.githubusercontent.com/73312468/194117721-5dd0f3fc-98e3-4827-b964-941446f1f014.gif)
 
 ## **Description of the project:**
@@ -18,8 +16,6 @@
 
 This project is basically a todo app, where users will be able to list down the tasks they wish to do. The goal for the project is that one day, somewhere, all the people in a coffee shop, with a list of tasks to do, will be addicted to this and you'll be part of the Impact 🙂.
 
-Originally designed to help Beginner Front-End developers to build a solid
-and real-world working app through the course of - [Hacktoberfest'22](https://hacktoberfest.com/).
 
 **All PRs To Be Merged From 1st October 2022**
 
