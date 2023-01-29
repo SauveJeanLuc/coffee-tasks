@@ -2,8 +2,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
-
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![COFFEE-TASKS](https://user-images.githubusercontent.com/73312468/194117721-5dd0f3fc-98e3-4827-b964-941446f1f014.gif)
