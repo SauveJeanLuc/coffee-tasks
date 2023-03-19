@@ -3,6 +3,7 @@ import Nav from './Nav';
 import PopUp from './PopUp';
 import DeletionDialog from './DeletionDialog';
 import Todo from './Todo';
+import '../dark.css';
 
 export default function ToDoContainer() {
   const [popUpvisible, setPopUpvisible] = useState(false);
@@ -103,9 +104,9 @@ export default function ToDoContainer() {
   return (
     <>
       <Nav setTodos={setTodos} setFilter={setFilter} />
-      <div className='bg-coffeePrimaryLight py-1 text-center rounded-md md:py-2.5 md:px-2'>
+      <div className='bg-coffeePrimaryLight dark:bg-orange-900 py-1 text-center rounded-md md:py-2.5 md:px-2'>
         {!todos?.length ? (
-          <span className='text-white font-semibold'>
+          <span className='text-stone-800 dark:text-stone-200 font-semibold'>
             You have no tasks. Let&#39;s add a task to get started.
           </span>
         ) : (
