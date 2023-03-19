@@ -22,6 +22,8 @@ This project is basically a todo app, where users will be able to list down the 
 Design link:
 [Figma Design](https://www.figma.com/file/2DdRHkoszU7lxTvcyBchJ8/React-TODO?node-id=0%3A1)
 
+Proposed design changes/revamp: [Figma File](https://www.figma.com/file/XVaKNbJ6KaZ1iml317vniG/Coffee-Tasks-_-Khushi?node-id=0%3A1)
+
 ## Create issue
 
 If you want to create a new issue make sure to read [report_bug.md](.github/ISSUE_TEMPLATE/bug_report.md)
